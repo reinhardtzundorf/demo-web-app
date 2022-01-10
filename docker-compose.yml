@@ -1,0 +1,27 @@
+version: '3.2'
+
+services:
+
+  frontend:
+    build: frontend
+    ports:
+      - 10000:80
+    volumes:
+      - ~/.composer-docker/cache:/root/.composer/cache:delegated
+      - ./frontend:/app
+
+  backend:
+    build: backend
+    ports:
+      - 10100:80
+    volumes:
+      - ~/.composer-docker/cache:/root/.composer/cache:delegated
+      - ./backend:/app
+
+  mysql:
+    image: mysql:5.7
+    environment:
+      - MYSQL_ROOT_PASSWORD=zundorf
+      - MYSQL_DATABASE=s2shopdb
+      - MYSQL_USER=reinhardt
+      - MYSQL_PASSWORD=zundorf
