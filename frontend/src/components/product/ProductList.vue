@@ -13,7 +13,16 @@
                 <tr v-for="(product, index) in products" v-bind:key="product.sku">
                     <td>{{ index + 1 }}</td>
                     <td>{{ product.sku }}</td>
-                    <td>{{ product.attributes }}</td>
+                    <td>
+                        <table class="table ">
+                            <tbody>
+                                <tr v-for="(k, v, idx) in product.attributes" v-bind:key="idx">
+                                    <td colspan="2">{{ k }}</td>
+                                    <td colspan="1">{{ v }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
                     <td>View</td>
                 </tr>
             </tbody>
@@ -32,7 +41,7 @@ export default {
         };
     },
     mounted() {
-        this.$http.get('/product')
+        this.$http.list()
                   .then(response => {
                      this.response = response
                      this.products = this.response.data
@@ -45,10 +54,10 @@ export default {
 <style lang="css" scoped>
 
 .product-list {
-    background-color: #fff;
-    box-shadow: 0px 0px 4px 8px rgba(0,0,0,0.0425);
-    padding: 24px;
-    margin: 24px;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.05);
+    padding: 48px;
+    /*margin: 24px;*/
 }
 
 </style>

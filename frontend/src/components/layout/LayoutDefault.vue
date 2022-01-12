@@ -52,7 +52,7 @@ export default {
 
 .default-sidebar {
     display: inline-flex;
-    padding: 42px;
+    /*padding: 42px;*/
     width: 200px;
     height: 550px;
     background-color: #efefef;

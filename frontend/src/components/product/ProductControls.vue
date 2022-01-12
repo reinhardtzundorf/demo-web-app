@@ -1,6 +1,8 @@
 <template>
-    <div>
-        <b-button v-for="item in actions" v-on:click="actionClicked(item.action)" v-bind:key="item.action">{{ item.text }}</b-button>
+    <div class="product-controls">
+        <b-list-group>
+          <b-list-group-item href="#" v-for="item in actions" v-on:click="actionClicked(item.action)" v-bind:key="item.action">{{ item.text }}</b-list-group-item>
+        </b-list-group>
     </div>
 </template>
 
@@ -27,4 +29,11 @@ export default {
 </script>
 
 <style lang="css" scoped>
+
+.product-controls {
+    min-width: 275px;
+    height: 400px;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
 </style>

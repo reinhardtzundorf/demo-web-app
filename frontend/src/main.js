@@ -19,12 +19,11 @@ Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
 
 /**
- * Http Client
- * Using axios library.
+ * Import service layer.
  * Accessible in any component via this.$http
  */
-import client from './plugins/axios'
-Vue.prototype.$http = client
+import service from './services/product.service.js'
+Vue.prototype.$http = service
 Vue.config.productionTip = false
 
 /**
