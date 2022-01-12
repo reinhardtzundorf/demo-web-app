@@ -1,5 +1,16 @@
 # WORK BREAKDOWN STRUCTURE 
 
+## DESIGN
+
+Considering that the requirements did not specify any authentication methods to be implemented for accessing the API and also taking into consideration that it is a simple application with only two endpoints (listing and creating), I thought it would be best to also keep the code simple. I've used the Yii framework to quickly set up the project structure with dependable libraries/packages, and just removed the ones which are responsible for generating any sort of HTML or front-end UI. 
+
+It occurred to me whilst I was busy creating the DB that it might be unnecessary to create additional tables for the product attributes and since there is an apparent "movement" in the eCommerce dev and dev-world in general to use NoSQL databases, I thought it might make things interesting to use the MySQL JSON column type for persisting the attributes. Each attribute would therefore be represented as property with a name and value corresponding to the attribute name and the value associated with it. 
+
+This conveniently returns a JSON object (as per provided specification document) per product record when a GET request is sent to the /product endpoint and negates the need for a data mapper or transformation class to be used before sending the response to the client. (as would be the case if I had to store the attributes in a separate `attribute` table and `product_attribute` table to act as a junction/linking table between the `attribute` and `product` tables).
+
+A concern should be raised regarding the searching and/or selecting of data from the `product` table when the JSON column-design is used. I have ran into issues in the past with the JSON column type and it may be seen as a 'technical headache' of sorts to go and select an attribute by JSON object using the odd $. notation. Regardless, this is possible and do-able, and beyond the scope of the current task at hand. 
+
+
 ## REQUIREMENTS
 
 Build a web app consisting of the following layers:
@@ -98,14 +109,18 @@ Request:
 3.  Edit the App.vue file and add components:
       a. ProductList.vue
       b. ProductAdd.vue
-4.  Add ProductControls.vue to serve as a sidebar nav menu. (instead of setting up VueRouter, due to the scope of the project.)
-5.  The following axios services must be setup in products.service.js in services directory:
-      a. getProducts()
-         /products 
-         GET
-      b. createProduct()
-         /products/create 
-         POST 
-         values from the form
-6.  JSON body containing all fields and attributes for a Product entity as per the backend APIs rules() configured in the Product.php model.
-7.  Add client side validation for the createProduct() request. Validate the form's data before the data is sent to the service layer.  
+      c. ProductControls.vue
+      d. LayoutDefault.vue
+5.  Add folders: product, layout, services, plugins
+6.  Add axios.js plugin with the baseURL configured in the axios defaults.
+7.  Add the product.service.js file to the service folder and implement list() and create() class methods.
+8.  Add ProductControls.vue to serve as a sidebar nav menu. (instead of setting up VueRouter, due to the scope of the project.)
+9.  JSON body containing all fields and attributes for a Product entity as per the backend APIs rules() configured in the Product.php model.
+10. Add client side validation for the createProduct() request. Validate the form's data before the data is sent to the service layer.  
+11. Create the ProductAdd.vue component's form which will have two sections, one with an input field for the sku and the other must be a 
+    custom input component which bubbles an event containing a JSON structure with key and value - this is the ProductAttributeInput.vue 
+    component. 
+12. Add custom method to the ProductAdd.vue component to merge the new JSON object into the form.attributes object. 
+13. Before sending the data to the /product/create endpoint, a function must be used to iterate and merge the array into a JSON object. 
+    (it is a JSON array in the scope of the ProductAdd.vue component).
+14. Test and commit. 

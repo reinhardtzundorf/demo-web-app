@@ -1,53 +1,71 @@
 <template>
-    <div class="product-add">
-        <b-form>
-            <b-container>
-                <form class="mt" @submit.prevent="login">
-                  <b-alert class="alert-sm" :variant="responseSuccess ? 'success' : 'danger'" v-if="responseMessage">
-                    {{ responseMessage }}
-                  </b-alert>
-                  <div class="form-group">
-                    <input class="form-control no-border" ref="email" required type="email" name="email" placeholder="Email" />
-                  </div>
-                  <div class="form-group">
-                    <input class="form-control no-border" ref="password" required type="password" name="password" placeholder="Password" />
-                  </div>
-                  <b-button type="submit" size="sm" class="auth-btn mb-3" variant="info">{{this.isFetching ? 'Loading...' : 'Login'}}</b-button>
-                  <p class="widget-auth-info">or sign in with</p>
-                  <div class="social-buttons">
-                    <b-button @click="googleLogin" variant="primary" class="social-button mb-2">
-                      <i class="social-icon social-google"></i>
-                      <p class="social-text">GOOGLE</p>
-                    </b-button>
-                    <b-button @click="microsoftLogin" variant="success" class="social-button">
-                      <i class="social-icon social-microsoft"></i>
-                      <p class="social-text">MICROSOFT</p>
-                    </b-button>
-                  </div>
-                </form>
-                <p class="widget-auth-info">
-                  Don't have an account? Sign up now!
-                </p>
-            </b-container>
-        </b-form>
-    </div>
+  <div class="product-add">
+    <b-container>
+      <b-form class="mt" @submit.prevent="login">
+        
+        <!-- RESPONSE -->
+        <b-alert class="alert-sm" :variant="responseSuccess ? 'success' : 'danger'" v-if="responseMessage">
+          {{ responseMessage }}
+        </b-alert>
+
+        <!-- PRODUCT INFO -->
+        <div class="form-row">
+          <div class="form-group">
+            <b-row>
+              <b-col lg="2">
+                <label class="form-label">SKU:</label>
+              </b-col>
+              <b-col lg="6">
+                <input class="form-control no-border" type="text" name="sku" required @change="validateSku(e)"/>
+              </b-col>
+            </b-row>
+          </div>
+        </div>
+
+        <!-- PRODUCT ATTRIBUTES -->
+        <div class="form-row" v-if="form.attributes.length > 0">
+          <div class="form-group" v-for="(value, key, index) in form.attributes" v-bind:key="index">
+            <ProductAttributeInput :id="index" :formName="key" :formValue="value"></ProductAttributeInput>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <ProductAttributeInput :id="(form.attributes.length+1)" @createAttribute="addAttribute"></ProductAttributeInput>
+          </div>
+        </div>
+
+        <!-- SUBMIT -->
+        <b-button type="submit">Create Product</b-button>
+
+      </b-form>
+    </b-container>
+  </div>
 </template>
 
 <script>
+
+import ProductAttributeInput from './components/ProductAttributeInput.vue'
+
 export default {
 
-  name: 'ProductList',
-
+  name: 'ProductAdd',
+  components: {
+    ProductAttributeInput
+  },
   data() {
     return {
       responseMessage: null,
-      responseSuccess: null
+      responseSuccess: null,
+      form: {
+        sku: null,
+        attributes: []
+      }
     };
   },
   props: {
     data: {
         type: Array,
-        required: true
+        required: false
     },
     errorResponse: {
       type: String, 
@@ -68,12 +86,18 @@ export default {
      * This method will return an array of errors if the validation failed, or
      * alternatively it just returns true.
      * 
-     * @param object $formData
+     * @param object formData
      * @return array|true
      */
-    validateData(formData) {
+    validateData(e) {
 
-      Object.keys(formData)
+      console.log(e)
+
+
+
+
+
+      // Object.keys(formData)
 
     },
 
@@ -89,6 +113,40 @@ export default {
      */
     onSubmit() {
 
+    },
+
+    /**
+     * Add Attribute
+     * 
+     * This method handles the event bubbled up from the ProductAttributeElement
+     * component.
+     * 
+     * @param object e
+     * @return void
+     */
+    addAttribute(e) {
+      const val = e.val
+      const key = e.key
+      const newAttr = {}
+      newAttr[key] = val
+      this.form.attributes.push(newAttr)
+    },
+
+    /**
+     * Get Last Inserted Id 
+     * 
+     * This method returns the last inserted product's ID from the database 
+     * table. It uses the actionIndex endpoint and selects the last item
+     * from the result set. If the result set is empty, it returns 0.
+     * 
+     * @return int lastId
+     */
+    async getLastInsertedId() {
+
+      const response = await this.$http.get('product?size=1')
+
+      console.log(response)
+
     }
 
   },
@@ -103,7 +161,8 @@ export default {
 <style lang="css" scoped>
 
 .product-add {
-
+  background-color: #fff;
+  padding: 42px;
 }
 
 .product-add p {
