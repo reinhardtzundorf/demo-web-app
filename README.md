@@ -1,10 +1,5 @@
 # demo-web-app
 
-## NAME
-
-Stock2Shop Technical Assessment (demo web app).
-
-
 ## SETUP
 
 1. Clone the Git repository on your local:
