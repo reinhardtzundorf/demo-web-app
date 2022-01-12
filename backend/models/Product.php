@@ -10,6 +10,7 @@ use Yii;
  *
  * @property int $id
  * @property string $sku
+ * @property string $attributes
  * @property string $created_at
  */
 class Product extends \yii\db\ActiveRecord

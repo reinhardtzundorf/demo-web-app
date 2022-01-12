@@ -4,6 +4,7 @@ namespace app\controllers;
 
 use app\models\Product;
 
+use yii\filters\Cors;
 use yii\filters\VerbFilter;
 use yii\filters\ContentNegotiator;
 use yii\web\NotFoundHttpException;
@@ -20,6 +21,9 @@ use yii\web\Controller;
  */
 class ProductController extends Controller
 {
+    
+    public $modelClass = "models\Product";
+    
     
     /**
      * Before Action
@@ -67,6 +71,15 @@ class ProductController extends Controller
         $behaviors["verbFilter"] = [
             "class" => VerbFilter::className()
         ];
+        
+        $behaviors['corsFilter'] = [
+            'class' => Cors::class,
+            'cors' => [
+                'Origin' => ['http://localhost:8080', 'http://localhost:8081', 'http://localhost:8082'],
+                'Access-Control-Request-Method' => ['POST', 'GET', 'OPTIONS'],
+                'Access-Control-Allow-Credentials' => false,
+            ]
+        ];
 
         return $behaviors;
     }
@@ -110,7 +123,7 @@ class ProductController extends Controller
          * Hydrate model with data.
          */
         $rawRequest = \Yii::$app->request->rawBody;
-        if(empty($rawRequest)) {
+        if(empty($rawRequest) || $rawRequest) {
             return "Request body may not be empty.";
         }
         
