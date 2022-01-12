@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '3ad4975760a2673da138c81b61636cc1e1ea1b5b',
+    'reference' => 'fd1340326ac5565651a23ca37c328c8ce7bccc5c',
     'name' => 'yiisoft/yii2-app-basic',
   ),
   'versions' => 
@@ -121,6 +121,16 @@
       ),
       'reference' => '8bc71d603883e918f93cebd2ddd897f087104eb1',
     ),
+    'codeception/module-rest' => 
+    array (
+      'pretty_version' => 'dev-master',
+      'version' => 'dev-master',
+      'aliases' => 
+      array (
+        0 => '9999999-dev',
+      ),
+      'reference' => '0f4f48b894735e91132aa23cb8fe868289dae7ca',
+    ),
     'codeception/module-yii2' => 
     array (
       'pretty_version' => '1.1.5',
@@ -182,7 +192,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '59bfb3b9be04237be4cd1afea9bbb58794c25ce8',
+      'reference' => '28ba6ff4c9fdd9e5cf251af81fe666e6c9cbc5ef',
     ),
     'egulias/email-validator' => 
     array (
@@ -211,6 +221,13 @@
         0 => '1.17.x-dev',
       ),
       'reference' => '9594d0aad844f6fab3e5e0e53a1ebd5d28605c7f',
+    ),
+    'flow/jsonpath' => 
+    array (
+      'replaced' => 
+      array (
+        0 => '*',
+      ),
     ),
     'guzzlehttp/guzzle' => 
     array (
@@ -241,6 +258,15 @@
         0 => '2.2.x-dev',
       ),
       'reference' => 'c5b547b9904106507e48c645b76ff74f18eea84e',
+    ),
+    'justinrainbow/json-schema' => 
+    array (
+      'pretty_version' => '5.2.11',
+      'version' => '5.2.11.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '2ab6744b7296ded80f8cc4f9509abbff393399aa',
     ),
     'myclabs/deep-copy' => 
     array (
@@ -408,13 +434,12 @@
     ),
     'psr/container' => 
     array (
-      'pretty_version' => 'dev-master',
-      'version' => 'dev-master',
+      'pretty_version' => '1.x-dev',
+      'version' => '1.9999999.9999999.9999999-dev',
       'aliases' => 
       array (
-        0 => '2.0.x-dev',
       ),
-      'reference' => 'c71ecc56dfe541dbd90c5360474fbc405f8d5963',
+      'reference' => '513e0666f7216c7459170d56df27dfcefe1689ea',
     ),
     'psr/event-dispatcher' => 
     array (
@@ -608,6 +633,15 @@
       ),
       'reference' => '99732be0ddb3361e16ad77b68ba41efc8e979019',
     ),
+    'softcreatr/jsonpath' => 
+    array (
+      'pretty_version' => '0.7.5',
+      'version' => '0.7.5.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '008569bf80aa3584834f7890781576bc7b65afa7',
+    ),
     'swiftmailer/swiftmailer' => 
     array (
       'pretty_version' => 'v6.3.0',
@@ -779,12 +813,12 @@
     ),
     'symfony/service-contracts' => 
     array (
-      'pretty_version' => 'v1.1.2',
-      'version' => '1.1.2.0',
+      'pretty_version' => '2.5.x-dev',
+      'version' => '2.5.9999999.9999999-dev',
       'aliases' => 
       array (
       ),
-      'reference' => '191afdcb5804db960d26d8566b7e9a2843cab3a0',
+      'reference' => '034c73d5dd4c05c71a27f05b3c43c0f2fcc8985a',
     ),
     'symfony/string' => 
     array (
@@ -840,7 +874,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '3ad4975760a2673da138c81b61636cc1e1ea1b5b',
+      'reference' => 'fd1340326ac5565651a23ca37c328c8ce7bccc5c',
     ),
     'yiisoft/yii2-bootstrap4' => 
     array (

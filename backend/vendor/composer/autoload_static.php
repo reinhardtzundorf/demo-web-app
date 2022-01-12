@@ -7,8 +7,8 @@ namespace Composer\Autoload;
 class ComposerStaticInitfb5f1f9b15b4f54ab15760e1995ee980
 {
     public static $files = array (
-        'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
         '6e3fae29631ef280660b3cdad06f25a8' => __DIR__ . '/..' . '/symfony/deprecation-contracts/function.php',
+        'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
         'e69f7f6ee287b969198c3c9d6777bd38' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/bootstrap.php',
@@ -22,10 +22,10 @@ class ComposerStaticInitfb5f1f9b15b4f54ab15760e1995ee980
         '5255c38a0faeba867671b61dfda6d864' => __DIR__ . '/..' . '/paragonie/random_compat/lib/random.php',
         '25072dd6e2470089de65ae7bf11d3109' => __DIR__ . '/..' . '/symfony/polyfill-php72/bootstrap.php',
         'f598d06aa772fa33d905e87be6398fb1' => __DIR__ . '/..' . '/symfony/polyfill-intl-idn/bootstrap.php',
-        'def43f6c87e4f8dfd0c9e1b1bab14fe8' => __DIR__ . '/..' . '/symfony/polyfill-iconv/bootstrap.php',
         'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
-        '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
+        'def43f6c87e4f8dfd0c9e1b1bab14fe8' => __DIR__ . '/..' . '/symfony/polyfill-iconv/bootstrap.php',
         '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
+        '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
         '180092cfc969a12e06f2132a203a3184' => __DIR__ . '/..' . '/codeception/verify/src/Codeception/function.php',
         '538ca81a9a966a6716601ecf48f4eaef' => __DIR__ . '/..' . '/opis/closure/functions.php',
     );
@@ -87,6 +87,10 @@ class ComposerStaticInitfb5f1f9b15b4f54ab15760e1995ee980
         array (
             'Opis\\Closure\\' => 13,
         ),
+        'J' => 
+        array (
+            'JsonSchema\\' => 11,
+        ),
         'G' => 
         array (
             'GuzzleHttp\\Psr7\\' => 16,
@@ -95,6 +99,7 @@ class ComposerStaticInitfb5f1f9b15b4f54ab15760e1995ee980
         ),
         'F' => 
         array (
+            'Flow\\JSONPath\\' => 14,
             'Faker\\' => 6,
         ),
         'E' => 
@@ -259,6 +264,10 @@ class ComposerStaticInitfb5f1f9b15b4f54ab15760e1995ee980
         array (
             0 => __DIR__ . '/..' . '/opis/closure/src',
         ),
+        'JsonSchema\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/justinrainbow/json-schema/src/JsonSchema',
+        ),
         'GuzzleHttp\\Psr7\\' => 
         array (
             0 => __DIR__ . '/..' . '/guzzlehttp/psr7/src',
@@ -270,6 +279,10 @@ class ComposerStaticInitfb5f1f9b15b4f54ab15760e1995ee980
         'GuzzleHttp\\' => 
         array (
             0 => __DIR__ . '/..' . '/guzzlehttp/guzzle/src',
+        ),
+        'Flow\\JSONPath\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/softcreatr/jsonpath/src',
         ),
         'Faker\\' => 
         array (
@@ -354,8 +367,12 @@ class ComposerStaticInitfb5f1f9b15b4f54ab15760e1995ee980
         'Codeception\\Module\\Asserts' => __DIR__ . '/..' . '/codeception/module-asserts/src/Codeception/Module/Asserts.php',
         'Codeception\\Module\\Filesystem' => __DIR__ . '/..' . '/codeception/module-filesystem/src/Codeception/Module/Filesystem.php',
         'Codeception\\Module\\PhpBrowser' => __DIR__ . '/..' . '/codeception/module-phpbrowser/src/Codeception/Module/PhpBrowser.php',
+        'Codeception\\Module\\REST' => __DIR__ . '/..' . '/codeception/module-rest/src/Codeception/Module/REST.php',
         'Codeception\\Module\\Yii2' => __DIR__ . '/..' . '/codeception/module-yii2/src/Codeception/Module/Yii2.php',
+        'Codeception\\Step\\AsJson' => __DIR__ . '/..' . '/codeception/module-rest/src/Codeception/Step/AsJson.php',
         'Codeception\\Util\\HttpCode' => __DIR__ . '/..' . '/codeception/lib-innerbrowser/src/Codeception/Util/HttpCode.php',
+        'Codeception\\Util\\JsonArray' => __DIR__ . '/..' . '/codeception/module-rest/src/Codeception/Util/JsonArray.php',
+        'Codeception\\Util\\JsonType' => __DIR__ . '/..' . '/codeception/module-rest/src/Codeception/Util/JsonType.php',
         'Codeception\\Util\\Shared\\Asserts' => __DIR__ . '/..' . '/codeception/lib-asserts/src/Codeception/Util/Shared/Asserts.php',
         'Codeception\\Util\\Shared\\InheritedAsserts' => __DIR__ . '/..' . '/codeception/lib-asserts/src/Codeception/Util/Shared/InheritedAsserts.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
