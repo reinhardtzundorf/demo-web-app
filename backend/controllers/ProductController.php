@@ -9,7 +9,7 @@ use yii\filters\VerbFilter;
 use yii\filters\ContentNegotiator;
 use yii\web\NotFoundHttpException;
 use yii\web\Response;
-use yii\web\Controller;
+use yii\rest\Controller;
 
 
 /**
@@ -22,7 +22,8 @@ use yii\web\Controller;
 class ProductController extends Controller
 {
     
-    public $modelClass = "models\Product";
+    public $enableCsrfValidation = false;
+    public $modelClass = "app\models\Product";
     
     
     /**
@@ -39,11 +40,42 @@ class ProductController extends Controller
      * @param type $action
      * @return type
      */
-    public function beforeAction($action)
+//    public function beforeAction($action)
+//    {
+//        $this->enableCsrfValidation = false;
+//        return parent::beforeAction($action);
+//    }
+    
+    /**
+     * Allowed Domains
+     * 
+     * This method returns the domains allowed in the CORS header.
+     * 
+     * @return array
+     */
+    public static function allowedDomains()
     {
-        $this->enableCsrfValidation = false;
-        return parent::beforeAction($action);
+        return [
+             "http://localhost:8081"
+        ];
     }
+    
+    /**
+     * {@inheritdoc}
+     */
+//    public function beforeAction($action)
+//    {
+//        if ($this->isPreFligt(Yii::$app->request)) {
+//            return true;
+//        }
+//
+//        return parent::beforeAction($action);
+//    }
+//    
+//    protected function isPreFligt($request)
+//    {
+//        return $request->isOptions;
+//    }
 
     /**
      * Behaviors
@@ -58,13 +90,12 @@ class ProductController extends Controller
      */
     public function behaviors()
     {
-
         $behaviors = [];
 
         $behaviors["contentNegotiator"] = [
             "class" => ContentNegotiator::class,
             "formats" => [
-                Response::FORMAT_JSON => Response::FORMAT_JSON
+                "application/json" => Response::FORMAT_JSON
             ]
         ];
 
@@ -72,18 +103,13 @@ class ProductController extends Controller
             "class" => VerbFilter::className()
         ];
         
-        $behaviors['corsFilter'] = [
-            'class' => Cors::class,
-            'cors' => [
-                'Origin' => ['http://localhost:8080', 'http://localhost:8081', 'http://localhost:8082'],
-                'Access-Control-Request-Method' => ['POST', 'GET', 'OPTIONS'],
-                'Access-Control-Allow-Credentials' => false,
-            ]
+        $behaviors["corsFilter"] = [
+            "class" => Cors::className()
         ];
 
         return $behaviors;
     }
-
+    
     /**
      * Action Index
      * 
@@ -111,11 +137,12 @@ class ProductController extends Controller
      */
     public function actionCreate()
     {
-        
+
         /**
          * Check request type is POST.
          */
         if(!$this->request->isPost) {
+            $this->response->statusCode = 400;
             return "Invalid request method.";
         }
         
@@ -123,7 +150,8 @@ class ProductController extends Controller
          * Hydrate model with data.
          */
         $rawRequest = \Yii::$app->request->rawBody;
-        if(empty($rawRequest) || $rawRequest) {
+        if(empty($rawRequest) || !$rawRequest) {
+            $this->response->statusCode = 400;
             return "Request body may not be empty.";
         }
         
@@ -137,14 +165,23 @@ class ProductController extends Controller
         $model->sku = $post->sku;
         $model->attributes = $post->attributes;
         
+        /**
+         * Set validation errors to response.
+         */
         if(!$model->validate()) {
+            $this->response->statusCode = 200;
             return $model->errors;
         }
         
+        /**
+         * Attempt to save.
+         */
         if(!$model->save()) {
+            $this->response->statusCode = 500;
             return "Failed to create product.";
         }
         
+        $this->response->statusCode = 201;
         return $model->id;
         
     }
@@ -158,12 +195,12 @@ class ProductController extends Controller
      */
     protected function findModel($id)
     {
-        if(($model = Product::findOne(['id' => $id])) !== null)
+        if(($model = Product::findOne(["id" => $id])) !== null)
         {
             return $model;
         }
 
-        throw new NotFoundHttpException('The requested page does not exist.');
+        throw new NotFoundHttpException("The requested page does not exist.");
     }
 
     public function response($message = "Successfully completed request.", bool $status = true, $data = null, $code = 200)

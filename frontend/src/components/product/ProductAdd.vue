@@ -92,6 +92,7 @@
 
 <script>
 
+import _ from 'lodash'
 import ProductAttributeInput from './components/ProductAttributeInput.vue'
 
 export default {
@@ -176,16 +177,27 @@ export default {
      */
     onSubmit() {
 
-      let productObject = {}
+      // let productObject = {}
 
-      productObject.sku = this.form.sku
-      productObject.attributes = {}
+      // productObject.sku = this.form.sku
+      // productObject.attributes = {}
 
-      this.form.attributes.forEach((attribute) => {
-        productObject.attributes[attribute.key] = attribute.val
+      // this.form.attributes.forEach((attribute) => {
+      //   productObject.attributes[attribute.key] = attribute.val
+      // })
+
+      let attr = this.form.attributes 
+
+      _.transform(attr, (r,c,k) => r.push({[k]:c}), [])
+
+      console.log(attr)
+
+      let newAttrObject = {}
+      this.form.attributes.forEach((arrayItem) => {
+        newAttrObject[arrayItem.key] = arrayItem.val
       })
 
-      this.$http.createProduct(this.form)
+      this.$http.createProduct({sku: this.form.sku, attributes: newAttrObject})
                 .then((response) => {
                   if(response.status === 201) {
                     alert("created");

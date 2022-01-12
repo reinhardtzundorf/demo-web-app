@@ -6,7 +6,6 @@
                     <th>#</th>
                     <th>SKU</th>
                     <th>Attributes</th>
-                    <th>View</th>
                 </tr>
             </thead>
             <tbody>
@@ -23,7 +22,6 @@
                             </tbody>
                         </table>
                     </td>
-                    <td>View</td>
                 </tr>
             </tbody>
         </table>
@@ -59,5 +57,7 @@ export default {
     padding: 48px;
     /*margin: 24px;*/
 }
+
+
 
 </style>

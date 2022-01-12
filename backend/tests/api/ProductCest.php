@@ -1,5 +1,7 @@
 <?php
 
+use app\models\Product;
+
 /**
  * Product Cest
  * 
@@ -62,7 +64,7 @@ class ProductCest
         // ID of the newly created product record. 
                
         $data = [
-            "sku" => "abc",
+            "sku" => "abc" . uniqid(),
             "attributes" => [
                 "att1" => "1",
                 "att2" => "2",
@@ -74,7 +76,17 @@ class ProductCest
        
         $I->seeResponseCodeIsSuccessful();
         $I->seeResponseIsJson();
-//        $I->seeResponseContains('[*]');
+        $response = $I->grabDataFromResponseByJsonPath("[*]");
+                
+       
+        /**
+         * Check if valid record in table.
+         */
+        $id = $response[0];
+        $I->comment("Checking DB `product` table for record with ID=" . $id);
+        if(is_integer($id)) {
+            $I->comment("Successfully created product with ID=" . $id);
+        }
         
     }
     

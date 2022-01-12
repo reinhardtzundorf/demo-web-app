@@ -9910,3 +9910,1982 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1641989262.0548
     'REQUEST_TIME' => 1641989262
 ]
+2022-01-12 21:11:07 [127.0.0.1][-][-][error][yii\base\InvalidConfigException] yii\base\InvalidConfigException: Allowing credentials for wildcard origins is insecure. Please specify more restrictive origins or set 'credentials' to false in your CORS configuration. in /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/filters/Cors.php:173
+Stack trace:
+#0 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/filters/Cors.php(108): yii\filters\Cors->prepareHeaders()
+#1 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/ActionFilter.php(77): yii\filters\Cors->beforeAction()
+#2 [internal function]: yii\base\ActionFilter->beforeFilter()
+#3 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Component.php(633): call_user_func()
+#4 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Controller.php(297): yii\base\Component->trigger()
+#5 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/web/Controller.php(221): yii\base\Controller->beforeAction()
+#6 /home/reinwoerstz/NetBeansProjects/Tests/backend/controllers/ProductController.php(45): yii\web\Controller->beforeAction()
+#7 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Controller.php(176): app\controllers\ProductController->beforeAction()
+#8 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction()
+#9 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#10 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#11 /home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php(12): yii\base\Application->run()
+#12 {main}
+2022-01-12 21:11:07 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/reinwoerstz/NetBeansProjects/Tests/backend/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '57072'
+    'SERVER_SOFTWARE' => 'PHP 7.4.27 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/product'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php'
+    'PATH_INFO' => '/product'
+    'PHP_SELF' => '/index.php/product'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Chromium\";v=\"92\", \" Not A;Brand\";v=\"99\", \"Google Chrome\";v=\"92\"'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36'
+    'HTTP_ORIGIN' => 'http://localhost:8081'
+    'HTTP_SEC_FETCH_SITE' => 'same-site'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost:8081/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-ZA,en-GB;q=0.9,en;q=0.8,af;q=0.7'
+    'REQUEST_TIME_FLOAT' => 1642018267.3486
+    'REQUEST_TIME' => 1642018267
+]
+2022-01-12 21:55:44 [127.0.0.1][-][-][error][yii\base\InvalidConfigException] yii\base\InvalidConfigException: Object configuration must be an array containing a "class" or "__class" element. in /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/BaseYii.php:368
+Stack trace:
+#0 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Component.php(756): yii\BaseYii::createObject()
+#1 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Component.php(740): yii\base\Component->attachBehaviorInternal()
+#2 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Component.php(609): yii\base\Component->ensureBehaviors()
+#3 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Controller.php(297): yii\base\Component->trigger()
+#4 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/web/Controller.php(221): yii\base\Controller->beforeAction()
+#5 /home/reinwoerstz/NetBeansProjects/Tests/backend/controllers/ProductController.php(45): yii\web\Controller->beforeAction()
+#6 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Controller.php(176): app\controllers\ProductController->beforeAction()
+#7 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction()
+#8 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#9 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#10 /home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php(12): yii\base\Application->run()
+#11 {main}
+2022-01-12 21:55:44 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/reinwoerstz/NetBeansProjects/Tests/backend/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '50778'
+    'SERVER_SOFTWARE' => 'PHP 7.4.27 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/product/create'
+    'REQUEST_METHOD' => 'OPTIONS'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php'
+    'PATH_INFO' => '/product/create'
+    'PHP_SELF' => '/index.php/product/create'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCESS_CONTROL_REQUEST_METHOD' => 'POST'
+    'HTTP_ACCESS_CONTROL_REQUEST_HEADERS' => 'content-type'
+    'HTTP_ORIGIN' => 'http://localhost:8081'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_SITE' => 'same-site'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost:8081/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-ZA,en-GB;q=0.9,en;q=0.8,af;q=0.7'
+    'REQUEST_TIME_FLOAT' => 1642020944.4046
+    'REQUEST_TIME' => 1642020944
+]
+2022-01-12 21:55:55 [127.0.0.1][-][-][error][yii\base\InvalidConfigException] yii\base\InvalidConfigException: Unsupported configuration type: NULL in /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/BaseYii.php:353
+Stack trace:
+#0 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Component.php(756): yii\BaseYii::createObject()
+#1 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Component.php(740): yii\base\Component->attachBehaviorInternal()
+#2 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Component.php(609): yii\base\Component->ensureBehaviors()
+#3 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Controller.php(297): yii\base\Component->trigger()
+#4 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/web/Controller.php(221): yii\base\Controller->beforeAction()
+#5 /home/reinwoerstz/NetBeansProjects/Tests/backend/controllers/ProductController.php(45): yii\web\Controller->beforeAction()
+#6 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Controller.php(176): app\controllers\ProductController->beforeAction()
+#7 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction()
+#8 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#9 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#10 /home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php(12): yii\base\Application->run()
+#11 {main}
+2022-01-12 21:55:55 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/reinwoerstz/NetBeansProjects/Tests/backend/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '50874'
+    'SERVER_SOFTWARE' => 'PHP 7.4.27 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/product/create'
+    'REQUEST_METHOD' => 'OPTIONS'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php'
+    'PATH_INFO' => '/product/create'
+    'PHP_SELF' => '/index.php/product/create'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCESS_CONTROL_REQUEST_METHOD' => 'POST'
+    'HTTP_ACCESS_CONTROL_REQUEST_HEADERS' => 'content-type'
+    'HTTP_ORIGIN' => 'http://localhost:8081'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_SITE' => 'same-site'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost:8081/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-ZA,en-GB;q=0.9,en;q=0.8,af;q=0.7'
+    'REQUEST_TIME_FLOAT' => 1642020955.1293
+    'REQUEST_TIME' => 1642020955
+]
+2022-01-12 22:04:01 [127.0.0.1][-][-][error][Error] Error: Class 'app\controllers\Yii' not found in /home/reinwoerstz/NetBeansProjects/Tests/backend/controllers/ProductController.php:68
+Stack trace:
+#0 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Controller.php(176): app\controllers\ProductController->beforeAction()
+#1 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction()
+#2 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#3 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#4 /home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php(12): yii\base\Application->run()
+#5 {main}
+2022-01-12 22:04:01 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/reinwoerstz/NetBeansProjects/Tests/backend/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '55000'
+    'SERVER_SOFTWARE' => 'PHP 7.4.27 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/product/create'
+    'REQUEST_METHOD' => 'OPTIONS'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php'
+    'PATH_INFO' => '/product/create'
+    'PHP_SELF' => '/index.php/product/create'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCESS_CONTROL_REQUEST_METHOD' => 'POST'
+    'HTTP_ACCESS_CONTROL_REQUEST_HEADERS' => 'content-type'
+    'HTTP_ORIGIN' => 'http://localhost:8081'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_SITE' => 'same-site'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost:8081/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-ZA,en-GB;q=0.9,en;q=0.8,af;q=0.7'
+    'REQUEST_TIME_FLOAT' => 1642021441.5453
+    'REQUEST_TIME' => 1642021441
+]
+2022-01-12 22:04:03 [127.0.0.1][-][-][error][Error] Error: Class 'app\controllers\Yii' not found in /home/reinwoerstz/NetBeansProjects/Tests/backend/controllers/ProductController.php:68
+Stack trace:
+#0 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Controller.php(176): app\controllers\ProductController->beforeAction()
+#1 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction()
+#2 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#3 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#4 /home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php(12): yii\base\Application->run()
+#5 {main}
+2022-01-12 22:04:03 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/reinwoerstz/NetBeansProjects/Tests/backend/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '55036'
+    'SERVER_SOFTWARE' => 'PHP 7.4.27 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/product'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php'
+    'PATH_INFO' => '/product'
+    'PHP_SELF' => '/index.php/product'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Chromium\";v=\"92\", \" Not A;Brand\";v=\"99\", \"Google Chrome\";v=\"92\"'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36'
+    'HTTP_ORIGIN' => 'http://localhost:8081'
+    'HTTP_SEC_FETCH_SITE' => 'same-site'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost:8081/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-ZA,en-GB;q=0.9,en;q=0.8,af;q=0.7'
+    'REQUEST_TIME_FLOAT' => 1642021443.8453
+    'REQUEST_TIME' => 1642021443
+]
+2022-01-12 22:04:12 [127.0.0.1][-][-][error][Error] Error: Class 'app\controllers\Yii' not found in /home/reinwoerstz/NetBeansProjects/Tests/backend/controllers/ProductController.php:68
+Stack trace:
+#0 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Controller.php(176): app\controllers\ProductController->beforeAction()
+#1 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction()
+#2 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#3 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#4 /home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php(12): yii\base\Application->run()
+#5 {main}
+2022-01-12 22:04:12 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/reinwoerstz/NetBeansProjects/Tests/backend/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '55116'
+    'SERVER_SOFTWARE' => 'PHP 7.4.27 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/product'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php'
+    'PATH_INFO' => '/product'
+    'PHP_SELF' => '/index.php/product'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Chromium\";v=\"92\", \" Not A;Brand\";v=\"99\", \"Google Chrome\";v=\"92\"'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36'
+    'HTTP_ORIGIN' => 'http://localhost:8081'
+    'HTTP_SEC_FETCH_SITE' => 'same-site'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost:8081/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-ZA,en-GB;q=0.9,en;q=0.8,af;q=0.7'
+    'REQUEST_TIME_FLOAT' => 1642021452.0235
+    'REQUEST_TIME' => 1642021452
+]
+2022-01-12 22:04:20 [127.0.0.1][-][-][error][Error] Error: Class 'app\controllers\Yii' not found in /home/reinwoerstz/NetBeansProjects/Tests/backend/controllers/ProductController.php:68
+Stack trace:
+#0 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Controller.php(176): app\controllers\ProductController->beforeAction()
+#1 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction()
+#2 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#3 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#4 /home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php(12): yii\base\Application->run()
+#5 {main}
+2022-01-12 22:04:20 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/reinwoerstz/NetBeansProjects/Tests/backend/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '55188'
+    'SERVER_SOFTWARE' => 'PHP 7.4.27 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/product/create'
+    'REQUEST_METHOD' => 'OPTIONS'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php'
+    'PATH_INFO' => '/product/create'
+    'PHP_SELF' => '/index.php/product/create'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCESS_CONTROL_REQUEST_METHOD' => 'POST'
+    'HTTP_ACCESS_CONTROL_REQUEST_HEADERS' => 'content-type'
+    'HTTP_ORIGIN' => 'http://localhost:8081'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_SITE' => 'same-site'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost:8081/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-ZA,en-GB;q=0.9,en;q=0.8,af;q=0.7'
+    'REQUEST_TIME_FLOAT' => 1642021460.1246
+    'REQUEST_TIME' => 1642021460
+]
+2022-01-12 22:05:49 [127.0.0.1][-][-][error][Error] Error: Class 'app\controllers\Model' not found in /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/di/Container.php:411
+Stack trace:
+#0 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/di/Container.php(411): ReflectionClass->newInstanceArgs()
+#1 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build()
+#2 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/BaseYii.php(345): yii\di\Container->get()
+#3 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Module.php(666): yii\BaseYii::createObject()
+#4 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Module.php(620): yii\base\Module->createControllerByID()
+#5 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Module.php(546): yii\base\Module->createController()
+#6 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#7 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#8 /home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php(12): yii\base\Application->run()
+#9 {main}
+2022-01-12 22:05:49 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/reinwoerstz/NetBeansProjects/Tests/backend/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '55918'
+    'SERVER_SOFTWARE' => 'PHP 7.4.27 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/product'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php'
+    'PATH_INFO' => '/product'
+    'PHP_SELF' => '/index.php/product'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Chromium\";v=\"92\", \" Not A;Brand\";v=\"99\", \"Google Chrome\";v=\"92\"'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36'
+    'HTTP_ORIGIN' => 'http://localhost:8081'
+    'HTTP_SEC_FETCH_SITE' => 'same-site'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost:8081/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-ZA,en-GB;q=0.9,en;q=0.8,af;q=0.7'
+    'REQUEST_TIME_FLOAT' => 1642021549.6465
+    'REQUEST_TIME' => 1642021549
+]
+2022-01-12 22:05:54 [127.0.0.1][-][-][error][Error] Error: Class 'app\controllers\Model' not found in /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/di/Container.php:411
+Stack trace:
+#0 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/di/Container.php(411): ReflectionClass->newInstanceArgs()
+#1 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build()
+#2 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/BaseYii.php(345): yii\di\Container->get()
+#3 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Module.php(666): yii\BaseYii::createObject()
+#4 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Module.php(620): yii\base\Module->createControllerByID()
+#5 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Module.php(546): yii\base\Module->createController()
+#6 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#7 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#8 /home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php(12): yii\base\Application->run()
+#9 {main}
+2022-01-12 22:05:54 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/reinwoerstz/NetBeansProjects/Tests/backend/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '55970'
+    'SERVER_SOFTWARE' => 'PHP 7.4.27 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/product/create'
+    'REQUEST_METHOD' => 'OPTIONS'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php'
+    'PATH_INFO' => '/product/create'
+    'PHP_SELF' => '/index.php/product/create'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCESS_CONTROL_REQUEST_METHOD' => 'POST'
+    'HTTP_ACCESS_CONTROL_REQUEST_HEADERS' => 'content-type'
+    'HTTP_ORIGIN' => 'http://localhost:8081'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_SITE' => 'same-site'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost:8081/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-ZA,en-GB;q=0.9,en;q=0.8,af;q=0.7'
+    'REQUEST_TIME_FLOAT' => 1642021554.4827
+    'REQUEST_TIME' => 1642021554
+]
+2022-01-12 22:06:05 [127.0.0.1][-][-][error][Error] Error: Class 'app\controllers\Model' not found in /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/di/Container.php:411
+Stack trace:
+#0 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/di/Container.php(411): ReflectionClass->newInstanceArgs()
+#1 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build()
+#2 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/BaseYii.php(345): yii\di\Container->get()
+#3 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Module.php(666): yii\BaseYii::createObject()
+#4 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Module.php(620): yii\base\Module->createControllerByID()
+#5 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Module.php(546): yii\base\Module->createController()
+#6 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#7 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#8 /home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php(12): yii\base\Application->run()
+#9 {main}
+2022-01-12 22:06:05 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/reinwoerstz/NetBeansProjects/Tests/backend/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '56062'
+    'SERVER_SOFTWARE' => 'PHP 7.4.27 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/product/create'
+    'REQUEST_METHOD' => 'OPTIONS'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php'
+    'PATH_INFO' => '/product/create'
+    'PHP_SELF' => '/index.php/product/create'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCESS_CONTROL_REQUEST_METHOD' => 'POST'
+    'HTTP_ACCESS_CONTROL_REQUEST_HEADERS' => 'content-type'
+    'HTTP_ORIGIN' => 'http://localhost:8081'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_SITE' => 'same-site'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost:8081/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-ZA,en-GB;q=0.9,en;q=0.8,af;q=0.7'
+    'REQUEST_TIME_FLOAT' => 1642021565.3614
+    'REQUEST_TIME' => 1642021565
+]
+2022-01-12 22:06:08 [127.0.0.1][-][-][error][Error] Error: Class 'app\controllers\Model' not found in /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/di/Container.php:411
+Stack trace:
+#0 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/di/Container.php(411): ReflectionClass->newInstanceArgs()
+#1 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build()
+#2 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/BaseYii.php(345): yii\di\Container->get()
+#3 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Module.php(666): yii\BaseYii::createObject()
+#4 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Module.php(620): yii\base\Module->createControllerByID()
+#5 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Module.php(546): yii\base\Module->createController()
+#6 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#7 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#8 /home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php(12): yii\base\Application->run()
+#9 {main}
+2022-01-12 22:06:08 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/reinwoerstz/NetBeansProjects/Tests/backend/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '56098'
+    'SERVER_SOFTWARE' => 'PHP 7.4.27 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/product'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php'
+    'PATH_INFO' => '/product'
+    'PHP_SELF' => '/index.php/product'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Chromium\";v=\"92\", \" Not A;Brand\";v=\"99\", \"Google Chrome\";v=\"92\"'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36'
+    'HTTP_ORIGIN' => 'http://localhost:8081'
+    'HTTP_SEC_FETCH_SITE' => 'same-site'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost:8081/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-ZA,en-GB;q=0.9,en;q=0.8,af;q=0.7'
+    'REQUEST_TIME_FLOAT' => 1642021568.4692
+    'REQUEST_TIME' => 1642021568
+]
+2022-01-12 22:06:16 [127.0.0.1][-][-][error][Error] Error: Class 'app\controllers\Model' not found in /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/di/Container.php:411
+Stack trace:
+#0 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/di/Container.php(411): ReflectionClass->newInstanceArgs()
+#1 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build()
+#2 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/BaseYii.php(345): yii\di\Container->get()
+#3 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Module.php(666): yii\BaseYii::createObject()
+#4 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Module.php(620): yii\base\Module->createControllerByID()
+#5 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Module.php(546): yii\base\Module->createController()
+#6 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#7 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#8 /home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php(12): yii\base\Application->run()
+#9 {main}
+2022-01-12 22:06:16 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/reinwoerstz/NetBeansProjects/Tests/backend/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '56170'
+    'SERVER_SOFTWARE' => 'PHP 7.4.27 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/product/create'
+    'REQUEST_METHOD' => 'OPTIONS'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php'
+    'PATH_INFO' => '/product/create'
+    'PHP_SELF' => '/index.php/product/create'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCESS_CONTROL_REQUEST_METHOD' => 'POST'
+    'HTTP_ACCESS_CONTROL_REQUEST_HEADERS' => 'content-type'
+    'HTTP_ORIGIN' => 'http://localhost:8081'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_SITE' => 'same-site'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost:8081/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-ZA,en-GB;q=0.9,en;q=0.8,af;q=0.7'
+    'REQUEST_TIME_FLOAT' => 1642021576.5029
+    'REQUEST_TIME' => 1642021576
+]
+2022-01-12 22:07:48 [127.0.0.1][-][-][error][Error] Error: Class 'app\controllers\Model' not found in /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/di/Container.php:411
+Stack trace:
+#0 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/di/Container.php(411): ReflectionClass->newInstanceArgs()
+#1 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build()
+#2 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/BaseYii.php(345): yii\di\Container->get()
+#3 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Module.php(666): yii\BaseYii::createObject()
+#4 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Module.php(620): yii\base\Module->createControllerByID()
+#5 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Module.php(546): yii\base\Module->createController()
+#6 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#7 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#8 /home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php(12): yii\base\Application->run()
+#9 {main}
+2022-01-12 22:07:48 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/reinwoerstz/NetBeansProjects/Tests/backend/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '56904'
+    'SERVER_SOFTWARE' => 'PHP 7.4.27 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/product/create'
+    'REQUEST_METHOD' => 'OPTIONS'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php'
+    'PATH_INFO' => '/product/create'
+    'PHP_SELF' => '/index.php/product/create'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCESS_CONTROL_REQUEST_METHOD' => 'POST'
+    'HTTP_ACCESS_CONTROL_REQUEST_HEADERS' => 'content-type'
+    'HTTP_ORIGIN' => 'http://localhost:8081'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_SITE' => 'same-site'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost:8081/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-ZA,en-GB;q=0.9,en;q=0.8,af;q=0.7'
+    'REQUEST_TIME_FLOAT' => 1642021668.1054
+    'REQUEST_TIME' => 1642021668
+]
+2022-01-12 22:07:52 [127.0.0.1][-][-][error][Error] Error: Class 'app\controllers\Model' not found in /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/di/Container.php:411
+Stack trace:
+#0 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/di/Container.php(411): ReflectionClass->newInstanceArgs()
+#1 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build()
+#2 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/BaseYii.php(345): yii\di\Container->get()
+#3 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Module.php(666): yii\BaseYii::createObject()
+#4 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Module.php(620): yii\base\Module->createControllerByID()
+#5 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Module.php(546): yii\base\Module->createController()
+#6 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#7 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#8 /home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php(12): yii\base\Application->run()
+#9 {main}
+2022-01-12 22:07:52 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/reinwoerstz/NetBeansProjects/Tests/backend/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '56940'
+    'SERVER_SOFTWARE' => 'PHP 7.4.27 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/product'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php'
+    'PATH_INFO' => '/product'
+    'PHP_SELF' => '/index.php/product'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Chromium\";v=\"92\", \" Not A;Brand\";v=\"99\", \"Google Chrome\";v=\"92\"'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36'
+    'HTTP_ORIGIN' => 'http://localhost:8081'
+    'HTTP_SEC_FETCH_SITE' => 'same-site'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost:8081/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-ZA,en-GB;q=0.9,en;q=0.8,af;q=0.7'
+    'REQUEST_TIME_FLOAT' => 1642021672.3094
+    'REQUEST_TIME' => 1642021672
+]
+2022-01-12 22:07:53 [127.0.0.1][-][-][error][Error] Error: Class 'app\controllers\Model' not found in /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/di/Container.php:411
+Stack trace:
+#0 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/di/Container.php(411): ReflectionClass->newInstanceArgs()
+#1 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build()
+#2 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/BaseYii.php(345): yii\di\Container->get()
+#3 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Module.php(666): yii\BaseYii::createObject()
+#4 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Module.php(620): yii\base\Module->createControllerByID()
+#5 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Module.php(546): yii\base\Module->createController()
+#6 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#7 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#8 /home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php(12): yii\base\Application->run()
+#9 {main}
+2022-01-12 22:07:53 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/reinwoerstz/NetBeansProjects/Tests/backend/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '56968'
+    'SERVER_SOFTWARE' => 'PHP 7.4.27 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/product'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php'
+    'PATH_INFO' => '/product'
+    'PHP_SELF' => '/index.php/product'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Chromium\";v=\"92\", \" Not A;Brand\";v=\"99\", \"Google Chrome\";v=\"92\"'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36'
+    'HTTP_ORIGIN' => 'http://localhost:8081'
+    'HTTP_SEC_FETCH_SITE' => 'same-site'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost:8081/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-ZA,en-GB;q=0.9,en;q=0.8,af;q=0.7'
+    'REQUEST_TIME_FLOAT' => 1642021673.8456
+    'REQUEST_TIME' => 1642021673
+]
+2022-01-12 22:07:56 [127.0.0.1][-][-][error][Error] Error: Class 'app\controllers\Model' not found in /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/di/Container.php:411
+Stack trace:
+#0 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/di/Container.php(411): ReflectionClass->newInstanceArgs()
+#1 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build()
+#2 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/BaseYii.php(345): yii\di\Container->get()
+#3 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Module.php(666): yii\BaseYii::createObject()
+#4 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Module.php(620): yii\base\Module->createControllerByID()
+#5 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Module.php(546): yii\base\Module->createController()
+#6 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#7 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#8 /home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php(12): yii\base\Application->run()
+#9 {main}
+2022-01-12 22:07:56 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/reinwoerstz/NetBeansProjects/Tests/backend/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '57000'
+    'SERVER_SOFTWARE' => 'PHP 7.4.27 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/product'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php'
+    'PATH_INFO' => '/product'
+    'PHP_SELF' => '/index.php/product'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Chromium\";v=\"92\", \" Not A;Brand\";v=\"99\", \"Google Chrome\";v=\"92\"'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36'
+    'HTTP_ORIGIN' => 'http://localhost:8081'
+    'HTTP_SEC_FETCH_SITE' => 'same-site'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost:8081/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-ZA,en-GB;q=0.9,en;q=0.8,af;q=0.7'
+    'REQUEST_TIME_FLOAT' => 1642021676.943
+    'REQUEST_TIME' => 1642021676
+]
+2022-01-12 22:07:59 [127.0.0.1][-][-][error][Error] Error: Class 'app\controllers\Model' not found in /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/di/Container.php:411
+Stack trace:
+#0 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/di/Container.php(411): ReflectionClass->newInstanceArgs()
+#1 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build()
+#2 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/BaseYii.php(345): yii\di\Container->get()
+#3 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Module.php(666): yii\BaseYii::createObject()
+#4 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Module.php(620): yii\base\Module->createControllerByID()
+#5 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Module.php(546): yii\base\Module->createController()
+#6 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#7 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#8 /home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php(12): yii\base\Application->run()
+#9 {main}
+2022-01-12 22:07:59 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/reinwoerstz/NetBeansProjects/Tests/backend/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '57030'
+    'SERVER_SOFTWARE' => 'PHP 7.4.27 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/product/create'
+    'REQUEST_METHOD' => 'OPTIONS'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php'
+    'PATH_INFO' => '/product/create'
+    'PHP_SELF' => '/index.php/product/create'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCESS_CONTROL_REQUEST_METHOD' => 'POST'
+    'HTTP_ACCESS_CONTROL_REQUEST_HEADERS' => 'content-type'
+    'HTTP_ORIGIN' => 'http://localhost:8081'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_SITE' => 'same-site'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost:8081/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-ZA,en-GB;q=0.9,en;q=0.8,af;q=0.7'
+    'REQUEST_TIME_FLOAT' => 1642021679.9612
+    'REQUEST_TIME' => 1642021679
+]
+2022-01-12 22:08:10 [127.0.0.1][-][-][error][Error] Error: Class 'app\controllers\Model' not found in /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/di/Container.php:411
+Stack trace:
+#0 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/di/Container.php(411): ReflectionClass->newInstanceArgs()
+#1 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build()
+#2 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/BaseYii.php(345): yii\di\Container->get()
+#3 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Module.php(666): yii\BaseYii::createObject()
+#4 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Module.php(620): yii\base\Module->createControllerByID()
+#5 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Module.php(546): yii\base\Module->createController()
+#6 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#7 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#8 /home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php(12): yii\base\Application->run()
+#9 {main}
+2022-01-12 22:08:10 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/reinwoerstz/NetBeansProjects/Tests/backend/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '57112'
+    'SERVER_SOFTWARE' => 'PHP 7.4.27 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/product'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php'
+    'PATH_INFO' => '/product'
+    'PHP_SELF' => '/index.php/product'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Symfony BrowserKit'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_CONTENT_TYPE' => 'application/json'
+    'REQUEST_TIME_FLOAT' => 1642021690.3503
+    'REQUEST_TIME' => 1642021690
+]
+2022-01-12 22:08:10 [127.0.0.1][-][-][error][Error] Error: Class 'app\controllers\Model' not found in /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/di/Container.php:411
+Stack trace:
+#0 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/di/Container.php(411): ReflectionClass->newInstanceArgs()
+#1 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build()
+#2 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/BaseYii.php(345): yii\di\Container->get()
+#3 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Module.php(666): yii\BaseYii::createObject()
+#4 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Module.php(620): yii\base\Module->createControllerByID()
+#5 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Module.php(546): yii\base\Module->createController()
+#6 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#7 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#8 /home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php(12): yii\base\Application->run()
+#9 {main}
+2022-01-12 22:08:10 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/reinwoerstz/NetBeansProjects/Tests/backend/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '57114'
+    'SERVER_SOFTWARE' => 'PHP 7.4.27 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/product/create'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php'
+    'PATH_INFO' => '/product/create'
+    'PHP_SELF' => '/index.php/product/create'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Symfony BrowserKit'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_CONTENT_TYPE' => 'application/json'
+    'CONTENT_LENGTH' => '61'
+    'HTTP_CONTENT_LENGTH' => '61'
+    'REQUEST_TIME_FLOAT' => 1642021690.3853
+    'REQUEST_TIME' => 1642021690
+]
+2022-01-12 22:08:10 [127.0.0.1][-][-][error][Error] Error: Class 'app\controllers\Model' not found in /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/di/Container.php:411
+Stack trace:
+#0 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/di/Container.php(411): ReflectionClass->newInstanceArgs()
+#1 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build()
+#2 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/BaseYii.php(345): yii\di\Container->get()
+#3 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Module.php(666): yii\BaseYii::createObject()
+#4 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Module.php(620): yii\base\Module->createControllerByID()
+#5 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Module.php(546): yii\base\Module->createController()
+#6 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#7 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#8 /home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php(12): yii\base\Application->run()
+#9 {main}
+2022-01-12 22:08:10 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/reinwoerstz/NetBeansProjects/Tests/backend/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '57116'
+    'SERVER_SOFTWARE' => 'PHP 7.4.27 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/product/create'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php'
+    'PATH_INFO' => '/product/create'
+    'PHP_SELF' => '/index.php/product/create'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Symfony BrowserKit'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_CONTENT_TYPE' => 'application/json'
+    'CONTENT_LENGTH' => '2'
+    'HTTP_CONTENT_LENGTH' => '2'
+    'REQUEST_TIME_FLOAT' => 1642021690.3956
+    'REQUEST_TIME' => 1642021690
+]
+2022-01-12 22:08:10 [127.0.0.1][-][-][error][Error] Error: Class 'app\controllers\Model' not found in /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/di/Container.php:411
+Stack trace:
+#0 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/di/Container.php(411): ReflectionClass->newInstanceArgs()
+#1 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build()
+#2 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/BaseYii.php(345): yii\di\Container->get()
+#3 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Module.php(666): yii\BaseYii::createObject()
+#4 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Module.php(620): yii\base\Module->createControllerByID()
+#5 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Module.php(546): yii\base\Module->createController()
+#6 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#7 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#8 /home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php(12): yii\base\Application->run()
+#9 {main}
+2022-01-12 22:08:10 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/reinwoerstz/NetBeansProjects/Tests/backend/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '57118'
+    'SERVER_SOFTWARE' => 'PHP 7.4.27 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/product/create'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php'
+    'PATH_INFO' => '/product/create'
+    'PHP_SELF' => '/index.php/product/create'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Symfony BrowserKit'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_CONTENT_TYPE' => 'application/json'
+    'CONTENT_LENGTH' => '61'
+    'HTTP_CONTENT_LENGTH' => '61'
+    'REQUEST_TIME_FLOAT' => 1642021690.4103
+    'REQUEST_TIME' => 1642021690
+]
+2022-01-12 22:08:24 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "". in /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Module.php:561
+Stack trace:
+#0 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#1 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#2 /home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#1 /home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2022-01-12 22:08:24 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_ga' => 'GA1.1.603577942.1631118063'
+    'wp-settings-time-4' => '1632915213'
+    'wp-settings-4' => 'libraryContent=browse&ampeditor=tinymce&amphidetb=1&ampadvImgDetails=show&editor=tinymce&align=center&urlbutton=custom'
+    'fm_cache' => '1'
+    '_ga_S8WSTGW6SD' => 'GS1.1.1636404329.26.0.1636404329.0'
+    'tk_or' => '\"\"'
+    'tk_lr' => '\"\"'
+    '_ga_R82LC8C5BH' => 'GS1.1.1638475185.6.1.1638475196.0'
+    '_identity' => '3054ccccff24268141e52c9a953a3b42da43a5d7c0677cc0cf68d766fcd9625ea:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"101\",\"test101key\",2592000]\";}'
+    '_ga_Y9MM7TV8NK' => 'GS1.1.1641818670.59.1.1641820286.0'
+    '_csrf' => 'ccb58dac9a9d09bc93797bb75dc28ed0d05d932ba6ac4945f5d51d405848a74da:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"VCBwuwD7IjiNzKJYLYyzPtfYAxVLAiRx\";}'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/reinwoerstz/NetBeansProjects/Tests/backend/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '57234'
+    'SERVER_SOFTWARE' => 'PHP 7.4.27 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php'
+    'PHP_SELF' => '/index.php'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Chromium\";v=\"92\", \" Not A;Brand\";v=\"99\", \"Google Chrome\";v=\"92\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_PURPOSE' => 'prefetch'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-ZA,en-GB;q=0.9,en;q=0.8,af;q=0.7'
+    'HTTP_COOKIE' => '_ga=GA1.1.603577942.1631118063; wp-settings-time-4=1632915213; wp-settings-4=libraryContent%3Dbrowse%26ampeditor%3Dtinymce%26amphidetb%3D1%26ampadvImgDetails%3Dshow%26editor%3Dtinymce%26align%3Dcenter%26urlbutton%3Dcustom; fm_cache=1; _ga_S8WSTGW6SD=GS1.1.1636404329.26.0.1636404329.0; tk_or=%22%22; tk_lr=%22%22; _ga_R82LC8C5BH=GS1.1.1638475185.6.1.1638475196.0; _identity=3054ccccff24268141e52c9a953a3b42da43a5d7c0677cc0cf68d766fcd9625ea%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22101%22%2C%22test101key%22%2C2592000%5D%22%3B%7D; _ga_Y9MM7TV8NK=GS1.1.1641818670.59.1.1641820286.0; _csrf=ccb58dac9a9d09bc93797bb75dc28ed0d05d932ba6ac4945f5d51d405848a74da%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22VCBwuwD7IjiNzKJYLYyzPtfYAxVLAiRx%22%3B%7D'
+    'HTTP_IF_NONE_MATCH' => 'W/\"303-+dM+pel+dHBQgrsOTa25AYtjT58\"'
+    'REQUEST_TIME_FLOAT' => 1642021704.7238
+    'REQUEST_TIME' => 1642021704
+]
+2022-01-12 22:08:30 [127.0.0.1][-][-][error][Error] Error: Class 'app\controllers\Model' not found in /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/di/Container.php:411
+Stack trace:
+#0 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/di/Container.php(411): ReflectionClass->newInstanceArgs()
+#1 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build()
+#2 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/BaseYii.php(345): yii\di\Container->get()
+#3 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Module.php(666): yii\BaseYii::createObject()
+#4 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Module.php(620): yii\base\Module->createControllerByID()
+#5 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Module.php(546): yii\base\Module->createController()
+#6 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#7 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#8 /home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php(12): yii\base\Application->run()
+#9 {main}
+2022-01-12 22:08:30 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_ga' => 'GA1.1.603577942.1631118063'
+    'wp-settings-time-4' => '1632915213'
+    'wp-settings-4' => 'libraryContent=browse&ampeditor=tinymce&amphidetb=1&ampadvImgDetails=show&editor=tinymce&align=center&urlbutton=custom'
+    'fm_cache' => '1'
+    '_ga_S8WSTGW6SD' => 'GS1.1.1636404329.26.0.1636404329.0'
+    'tk_or' => '\"\"'
+    'tk_lr' => '\"\"'
+    '_ga_R82LC8C5BH' => 'GS1.1.1638475185.6.1.1638475196.0'
+    '_identity' => '3054ccccff24268141e52c9a953a3b42da43a5d7c0677cc0cf68d766fcd9625ea:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"101\",\"test101key\",2592000]\";}'
+    '_ga_Y9MM7TV8NK' => 'GS1.1.1641818670.59.1.1641820286.0'
+    '_csrf' => 'ccb58dac9a9d09bc93797bb75dc28ed0d05d932ba6ac4945f5d51d405848a74da:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"VCBwuwD7IjiNzKJYLYyzPtfYAxVLAiRx\";}'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/reinwoerstz/NetBeansProjects/Tests/backend/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '57246'
+    'SERVER_SOFTWARE' => 'PHP 7.4.27 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/product'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php'
+    'PATH_INFO' => '/product'
+    'PHP_SELF' => '/index.php/product'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Chromium\";v=\"92\", \" Not A;Brand\";v=\"99\", \"Google Chrome\";v=\"92\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-ZA,en-GB;q=0.9,en;q=0.8,af;q=0.7'
+    'HTTP_COOKIE' => '_ga=GA1.1.603577942.1631118063; wp-settings-time-4=1632915213; wp-settings-4=libraryContent%3Dbrowse%26ampeditor%3Dtinymce%26amphidetb%3D1%26ampadvImgDetails%3Dshow%26editor%3Dtinymce%26align%3Dcenter%26urlbutton%3Dcustom; fm_cache=1; _ga_S8WSTGW6SD=GS1.1.1636404329.26.0.1636404329.0; tk_or=%22%22; tk_lr=%22%22; _ga_R82LC8C5BH=GS1.1.1638475185.6.1.1638475196.0; _identity=3054ccccff24268141e52c9a953a3b42da43a5d7c0677cc0cf68d766fcd9625ea%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22101%22%2C%22test101key%22%2C2592000%5D%22%3B%7D; _ga_Y9MM7TV8NK=GS1.1.1641818670.59.1.1641820286.0; _csrf=ccb58dac9a9d09bc93797bb75dc28ed0d05d932ba6ac4945f5d51d405848a74da%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22VCBwuwD7IjiNzKJYLYyzPtfYAxVLAiRx%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1642021710.7384
+    'REQUEST_TIME' => 1642021710
+]
+2022-01-12 22:08:45 [127.0.0.1][-][-][error][Error] Error: Class 'app\controllers\models\Product' not found in /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/di/Container.php:411
+Stack trace:
+#0 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/di/Container.php(411): ReflectionClass->newInstanceArgs()
+#1 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build()
+#2 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/BaseYii.php(345): yii\di\Container->get()
+#3 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Module.php(666): yii\BaseYii::createObject()
+#4 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Module.php(620): yii\base\Module->createControllerByID()
+#5 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Module.php(546): yii\base\Module->createController()
+#6 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#7 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#8 /home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php(12): yii\base\Application->run()
+#9 {main}
+2022-01-12 22:08:45 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_ga' => 'GA1.1.603577942.1631118063'
+    'wp-settings-time-4' => '1632915213'
+    'wp-settings-4' => 'libraryContent=browse&ampeditor=tinymce&amphidetb=1&ampadvImgDetails=show&editor=tinymce&align=center&urlbutton=custom'
+    'fm_cache' => '1'
+    '_ga_S8WSTGW6SD' => 'GS1.1.1636404329.26.0.1636404329.0'
+    'tk_or' => '\"\"'
+    'tk_lr' => '\"\"'
+    '_ga_R82LC8C5BH' => 'GS1.1.1638475185.6.1.1638475196.0'
+    '_identity' => '3054ccccff24268141e52c9a953a3b42da43a5d7c0677cc0cf68d766fcd9625ea:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"101\",\"test101key\",2592000]\";}'
+    '_ga_Y9MM7TV8NK' => 'GS1.1.1641818670.59.1.1641820286.0'
+    '_csrf' => 'ccb58dac9a9d09bc93797bb75dc28ed0d05d932ba6ac4945f5d51d405848a74da:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"VCBwuwD7IjiNzKJYLYyzPtfYAxVLAiRx\";}'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/reinwoerstz/NetBeansProjects/Tests/backend/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '57250'
+    'SERVER_SOFTWARE' => 'PHP 7.4.27 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/product'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php'
+    'PATH_INFO' => '/product'
+    'PHP_SELF' => '/index.php/product'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Chromium\";v=\"92\", \" Not A;Brand\";v=\"99\", \"Google Chrome\";v=\"92\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-ZA,en-GB;q=0.9,en;q=0.8,af;q=0.7'
+    'HTTP_COOKIE' => '_ga=GA1.1.603577942.1631118063; wp-settings-time-4=1632915213; wp-settings-4=libraryContent%3Dbrowse%26ampeditor%3Dtinymce%26amphidetb%3D1%26ampadvImgDetails%3Dshow%26editor%3Dtinymce%26align%3Dcenter%26urlbutton%3Dcustom; fm_cache=1; _ga_S8WSTGW6SD=GS1.1.1636404329.26.0.1636404329.0; tk_or=%22%22; tk_lr=%22%22; _ga_R82LC8C5BH=GS1.1.1638475185.6.1.1638475196.0; _identity=3054ccccff24268141e52c9a953a3b42da43a5d7c0677cc0cf68d766fcd9625ea%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22101%22%2C%22test101key%22%2C2592000%5D%22%3B%7D; _ga_Y9MM7TV8NK=GS1.1.1641818670.59.1.1641820286.0; _csrf=ccb58dac9a9d09bc93797bb75dc28ed0d05d932ba6ac4945f5d51d405848a74da%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22VCBwuwD7IjiNzKJYLYyzPtfYAxVLAiRx%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1642021725.1249
+    'REQUEST_TIME' => 1642021725
+]
+2022-01-12 22:09:08 [127.0.0.1][-][-][error][Error] Error: Class 'app\controllers\app\models\Product' not found in /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/di/Container.php:411
+Stack trace:
+#0 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/di/Container.php(411): ReflectionClass->newInstanceArgs()
+#1 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build()
+#2 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/BaseYii.php(345): yii\di\Container->get()
+#3 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Module.php(666): yii\BaseYii::createObject()
+#4 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Module.php(620): yii\base\Module->createControllerByID()
+#5 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Module.php(546): yii\base\Module->createController()
+#6 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#7 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#8 /home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php(12): yii\base\Application->run()
+#9 {main}
+2022-01-12 22:09:08 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_ga' => 'GA1.1.603577942.1631118063'
+    'wp-settings-time-4' => '1632915213'
+    'wp-settings-4' => 'libraryContent=browse&ampeditor=tinymce&amphidetb=1&ampadvImgDetails=show&editor=tinymce&align=center&urlbutton=custom'
+    'fm_cache' => '1'
+    '_ga_S8WSTGW6SD' => 'GS1.1.1636404329.26.0.1636404329.0'
+    'tk_or' => '\"\"'
+    'tk_lr' => '\"\"'
+    '_ga_R82LC8C5BH' => 'GS1.1.1638475185.6.1.1638475196.0'
+    '_identity' => '3054ccccff24268141e52c9a953a3b42da43a5d7c0677cc0cf68d766fcd9625ea:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"101\",\"test101key\",2592000]\";}'
+    '_ga_Y9MM7TV8NK' => 'GS1.1.1641818670.59.1.1641820286.0'
+    '_csrf' => 'ccb58dac9a9d09bc93797bb75dc28ed0d05d932ba6ac4945f5d51d405848a74da:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"VCBwuwD7IjiNzKJYLYyzPtfYAxVLAiRx\";}'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/reinwoerstz/NetBeansProjects/Tests/backend/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '57606'
+    'SERVER_SOFTWARE' => 'PHP 7.4.27 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/product'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php'
+    'PATH_INFO' => '/product'
+    'PHP_SELF' => '/index.php/product'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Chromium\";v=\"92\", \" Not A;Brand\";v=\"99\", \"Google Chrome\";v=\"92\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-ZA,en-GB;q=0.9,en;q=0.8,af;q=0.7'
+    'HTTP_COOKIE' => '_ga=GA1.1.603577942.1631118063; wp-settings-time-4=1632915213; wp-settings-4=libraryContent%3Dbrowse%26ampeditor%3Dtinymce%26amphidetb%3D1%26ampadvImgDetails%3Dshow%26editor%3Dtinymce%26align%3Dcenter%26urlbutton%3Dcustom; fm_cache=1; _ga_S8WSTGW6SD=GS1.1.1636404329.26.0.1636404329.0; tk_or=%22%22; tk_lr=%22%22; _ga_R82LC8C5BH=GS1.1.1638475185.6.1.1638475196.0; _identity=3054ccccff24268141e52c9a953a3b42da43a5d7c0677cc0cf68d766fcd9625ea%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22101%22%2C%22test101key%22%2C2592000%5D%22%3B%7D; _ga_Y9MM7TV8NK=GS1.1.1641818670.59.1.1641820286.0; _csrf=ccb58dac9a9d09bc93797bb75dc28ed0d05d932ba6ac4945f5d51d405848a74da%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22VCBwuwD7IjiNzKJYLYyzPtfYAxVLAiRx%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1642021748.3892
+    'REQUEST_TIME' => 1642021748
+]
+2022-01-12 22:11:55 [127.0.0.1][-][-][error][yii\base\ErrorException:2] yii\base\ErrorException: implode(): Invalid arguments passed in /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/filters/Cors.php:202
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError()
+#1 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/filters/Cors.php(202): implode()
+#2 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/filters/Cors.php(108): yii\filters\Cors->prepareHeaders()
+#3 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/ActionFilter.php(77): yii\filters\Cors->beforeAction()
+#4 [internal function]: yii\base\ActionFilter->beforeFilter()
+#5 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Component.php(633): call_user_func()
+#6 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Controller.php(297): yii\base\Component->trigger()
+#7 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/web/Controller.php(221): yii\base\Controller->beforeAction()
+#8 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Controller.php(176): yii\web\Controller->beforeAction()
+#9 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction()
+#10 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#11 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#12 /home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php(12): yii\base\Application->run()
+#13 {main}
+2022-01-12 22:11:55 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/reinwoerstz/NetBeansProjects/Tests/backend/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '59062'
+    'SERVER_SOFTWARE' => 'PHP 7.4.27 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/product/create'
+    'REQUEST_METHOD' => 'OPTIONS'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php'
+    'PATH_INFO' => '/product/create'
+    'PHP_SELF' => '/index.php/product/create'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCESS_CONTROL_REQUEST_METHOD' => 'POST'
+    'HTTP_ACCESS_CONTROL_REQUEST_HEADERS' => 'content-type'
+    'HTTP_ORIGIN' => 'http://localhost:8081'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_SITE' => 'same-site'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost:8081/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-ZA,en-GB;q=0.9,en;q=0.8,af;q=0.7'
+    'REQUEST_TIME_FLOAT' => 1642021915.9074
+    'REQUEST_TIME' => 1642021915
+]
+2022-01-12 22:13:43 [127.0.0.1][-][-][error][yii\base\ErrorException:2] yii\base\ErrorException: implode(): Invalid arguments passed in /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/filters/Cors.php:202
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError()
+#1 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/filters/Cors.php(202): implode()
+#2 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/filters/Cors.php(108): yii\filters\Cors->prepareHeaders()
+#3 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/ActionFilter.php(77): yii\filters\Cors->beforeAction()
+#4 [internal function]: yii\base\ActionFilter->beforeFilter()
+#5 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Component.php(633): call_user_func()
+#6 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Controller.php(297): yii\base\Component->trigger()
+#7 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/web/Controller.php(221): yii\base\Controller->beforeAction()
+#8 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Controller.php(176): yii\web\Controller->beforeAction()
+#9 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction()
+#10 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#11 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#12 /home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php(12): yii\base\Application->run()
+#13 {main}
+2022-01-12 22:13:43 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/reinwoerstz/NetBeansProjects/Tests/backend/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '59922'
+    'SERVER_SOFTWARE' => 'PHP 7.4.27 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/product/create'
+    'REQUEST_METHOD' => 'OPTIONS'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php'
+    'PATH_INFO' => '/product/create'
+    'PHP_SELF' => '/index.php/product/create'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCESS_CONTROL_REQUEST_METHOD' => 'POST'
+    'HTTP_ACCESS_CONTROL_REQUEST_HEADERS' => 'content-type'
+    'HTTP_ORIGIN' => 'http://localhost:8081'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_SITE' => 'same-site'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost:8081/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-ZA,en-GB;q=0.9,en;q=0.8,af;q=0.7'
+    'REQUEST_TIME_FLOAT' => 1642022023.5395
+    'REQUEST_TIME' => 1642022023
+]
+2022-01-12 22:14:09 [127.0.0.1][-][-][error][yii\base\ErrorException:2] yii\base\ErrorException: implode(): Invalid arguments passed in /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/filters/Cors.php:202
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError()
+#1 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/filters/Cors.php(202): implode()
+#2 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/filters/Cors.php(108): yii\filters\Cors->prepareHeaders()
+#3 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/ActionFilter.php(77): yii\filters\Cors->beforeAction()
+#4 [internal function]: yii\base\ActionFilter->beforeFilter()
+#5 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Component.php(633): call_user_func()
+#6 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Controller.php(297): yii\base\Component->trigger()
+#7 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/web/Controller.php(221): yii\base\Controller->beforeAction()
+#8 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Controller.php(176): yii\web\Controller->beforeAction()
+#9 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction()
+#10 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#11 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#12 /home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php(12): yii\base\Application->run()
+#13 {main}
+2022-01-12 22:14:09 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/reinwoerstz/NetBeansProjects/Tests/backend/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '60142'
+    'SERVER_SOFTWARE' => 'PHP 7.4.27 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/product'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php'
+    'PATH_INFO' => '/product'
+    'PHP_SELF' => '/index.php/product'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Chromium\";v=\"92\", \" Not A;Brand\";v=\"99\", \"Google Chrome\";v=\"92\"'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36'
+    'HTTP_ORIGIN' => 'http://localhost:8081'
+    'HTTP_SEC_FETCH_SITE' => 'same-site'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost:8081/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-ZA,en-GB;q=0.9,en;q=0.8,af;q=0.7'
+    'REQUEST_TIME_FLOAT' => 1642022049.744
+    'REQUEST_TIME' => 1642022049
+]
+2022-01-12 22:14:22 [127.0.0.1][-][-][error][yii\base\ErrorException:2] yii\base\ErrorException: implode(): Invalid arguments passed in /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/filters/Cors.php:202
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError()
+#1 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/filters/Cors.php(202): implode()
+#2 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/filters/Cors.php(108): yii\filters\Cors->prepareHeaders()
+#3 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/ActionFilter.php(77): yii\filters\Cors->beforeAction()
+#4 [internal function]: yii\base\ActionFilter->beforeFilter()
+#5 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Component.php(633): call_user_func()
+#6 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Controller.php(297): yii\base\Component->trigger()
+#7 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/web/Controller.php(221): yii\base\Controller->beforeAction()
+#8 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Controller.php(176): yii\web\Controller->beforeAction()
+#9 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction()
+#10 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#11 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#12 /home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php(12): yii\base\Application->run()
+#13 {main}
+2022-01-12 22:14:22 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/reinwoerstz/NetBeansProjects/Tests/backend/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '60262'
+    'SERVER_SOFTWARE' => 'PHP 7.4.27 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/product'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php'
+    'PATH_INFO' => '/product'
+    'PHP_SELF' => '/index.php/product'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Chromium\";v=\"92\", \" Not A;Brand\";v=\"99\", \"Google Chrome\";v=\"92\"'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36'
+    'HTTP_ORIGIN' => 'http://localhost:8081'
+    'HTTP_SEC_FETCH_SITE' => 'same-site'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost:8081/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-ZA,en-GB;q=0.9,en;q=0.8,af;q=0.7'
+    'REQUEST_TIME_FLOAT' => 1642022062.6064
+    'REQUEST_TIME' => 1642022062
+]
+2022-01-12 22:14:25 [127.0.0.1][-][-][error][yii\base\ErrorException:2] yii\base\ErrorException: implode(): Invalid arguments passed in /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/filters/Cors.php:202
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError()
+#1 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/filters/Cors.php(202): implode()
+#2 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/filters/Cors.php(108): yii\filters\Cors->prepareHeaders()
+#3 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/ActionFilter.php(77): yii\filters\Cors->beforeAction()
+#4 [internal function]: yii\base\ActionFilter->beforeFilter()
+#5 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Component.php(633): call_user_func()
+#6 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Controller.php(297): yii\base\Component->trigger()
+#7 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/web/Controller.php(221): yii\base\Controller->beforeAction()
+#8 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Controller.php(176): yii\web\Controller->beforeAction()
+#9 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction()
+#10 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#11 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#12 /home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php(12): yii\base\Application->run()
+#13 {main}
+2022-01-12 22:14:25 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/reinwoerstz/NetBeansProjects/Tests/backend/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '60286'
+    'SERVER_SOFTWARE' => 'PHP 7.4.27 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/product'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php'
+    'PATH_INFO' => '/product'
+    'PHP_SELF' => '/index.php/product'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Chromium\";v=\"92\", \" Not A;Brand\";v=\"99\", \"Google Chrome\";v=\"92\"'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36'
+    'HTTP_ORIGIN' => 'http://localhost:8081'
+    'HTTP_SEC_FETCH_SITE' => 'same-site'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost:8081/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-ZA,en-GB;q=0.9,en;q=0.8,af;q=0.7'
+    'REQUEST_TIME_FLOAT' => 1642022065.2799
+    'REQUEST_TIME' => 1642022065
+]
+2022-01-12 22:22:54 [127.0.0.1][-][-][error][yii\base\InvalidArgumentException] yii\base\InvalidArgumentException: Response content must not be an array. in /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/web/Response.php:1108
+Stack trace:
+#0 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->prepare()
+#1 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php(12): yii\base\Application->run()
+#3 {main}
+2022-01-12 22:22:54 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/reinwoerstz/NetBeansProjects/Tests/backend/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '36388'
+    'SERVER_SOFTWARE' => 'PHP 7.4.27 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/product/create'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php'
+    'PATH_INFO' => '/product/create'
+    'PHP_SELF' => '/index.php/product/create'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '89'
+    'HTTP_CONTENT_LENGTH' => '89'
+    'HTTP_SEC_CH_UA' => '\"Chromium\";v=\"92\", \" Not A;Brand\";v=\"99\", \"Google Chrome\";v=\"92\"'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_CONTENT_TYPE' => 'application/json'
+    'HTTP_ORIGIN' => 'http://localhost:8081'
+    'HTTP_SEC_FETCH_SITE' => 'same-site'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost:8081/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-ZA,en-GB;q=0.9,en;q=0.8,af;q=0.7'
+    'REQUEST_TIME_FLOAT' => 1642022574.4707
+    'REQUEST_TIME' => 1642022574
+]
+2022-01-12 22:23:14 [127.0.0.1][-][-][error][yii\base\InvalidArgumentException] yii\base\InvalidArgumentException: Response content must not be an array. in /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/web/Response.php:1108
+Stack trace:
+#0 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->prepare()
+#1 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php(12): yii\base\Application->run()
+#3 {main}
+2022-01-12 22:23:14 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/reinwoerstz/NetBeansProjects/Tests/backend/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '36568'
+    'SERVER_SOFTWARE' => 'PHP 7.4.27 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/product/create'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php'
+    'PATH_INFO' => '/product/create'
+    'PHP_SELF' => '/index.php/product/create'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '89'
+    'HTTP_CONTENT_LENGTH' => '89'
+    'HTTP_SEC_CH_UA' => '\"Chromium\";v=\"92\", \" Not A;Brand\";v=\"99\", \"Google Chrome\";v=\"92\"'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_CONTENT_TYPE' => 'application/json'
+    'HTTP_ORIGIN' => 'http://localhost:8081'
+    'HTTP_SEC_FETCH_SITE' => 'same-site'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost:8081/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-ZA,en-GB;q=0.9,en;q=0.8,af;q=0.7'
+    'REQUEST_TIME_FLOAT' => 1642022594.9185
+    'REQUEST_TIME' => 1642022594
+]
+2022-01-12 22:25:34 [127.0.0.1][-][-][error][yii\base\ErrorException:2] yii\base\ErrorException: Creating default object from empty value in /home/reinwoerstz/NetBeansProjects/Tests/backend/controllers/ProductController.php:141
+Stack trace:
+#0 /home/reinwoerstz/NetBeansProjects/Tests/backend/controllers/ProductController.php(141): yii\base\ErrorHandler->handleError()
+#1 [internal function]: app\controllers\ProductController->actionCreate()
+#2 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array()
+#3 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams()
+#4 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction()
+#5 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#6 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#7 /home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php(12): yii\base\Application->run()
+#8 {main}
+2022-01-12 22:25:34 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/reinwoerstz/NetBeansProjects/Tests/backend/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '37704'
+    'SERVER_SOFTWARE' => 'PHP 7.4.27 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/product/create'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php'
+    'PATH_INFO' => '/product/create'
+    'PHP_SELF' => '/index.php/product/create'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Symfony BrowserKit'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_CONTENT_TYPE' => 'application/json'
+    'CONTENT_LENGTH' => '61'
+    'HTTP_CONTENT_LENGTH' => '61'
+    'REQUEST_TIME_FLOAT' => 1642022734.6525
+    'REQUEST_TIME' => 1642022734
+]
+2022-01-12 22:25:34 [127.0.0.1][-][-][error][yii\base\ErrorException:2] yii\base\ErrorException: Creating default object from empty value in /home/reinwoerstz/NetBeansProjects/Tests/backend/controllers/ProductController.php:141
+Stack trace:
+#0 /home/reinwoerstz/NetBeansProjects/Tests/backend/controllers/ProductController.php(141): yii\base\ErrorHandler->handleError()
+#1 [internal function]: app\controllers\ProductController->actionCreate()
+#2 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array()
+#3 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams()
+#4 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction()
+#5 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#6 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#7 /home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php(12): yii\base\Application->run()
+#8 {main}
+2022-01-12 22:25:34 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/reinwoerstz/NetBeansProjects/Tests/backend/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '37706'
+    'SERVER_SOFTWARE' => 'PHP 7.4.27 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/product/create'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php'
+    'PATH_INFO' => '/product/create'
+    'PHP_SELF' => '/index.php/product/create'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Symfony BrowserKit'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_CONTENT_TYPE' => 'application/json'
+    'CONTENT_LENGTH' => '2'
+    'HTTP_CONTENT_LENGTH' => '2'
+    'REQUEST_TIME_FLOAT' => 1642022734.6616
+    'REQUEST_TIME' => 1642022734
+]
+2022-01-12 22:25:34 [127.0.0.1][-][-][error][yii\base\ErrorException:2] yii\base\ErrorException: Creating default object from empty value in /home/reinwoerstz/NetBeansProjects/Tests/backend/controllers/ProductController.php:141
+Stack trace:
+#0 /home/reinwoerstz/NetBeansProjects/Tests/backend/controllers/ProductController.php(141): yii\base\ErrorHandler->handleError()
+#1 [internal function]: app\controllers\ProductController->actionCreate()
+#2 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array()
+#3 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams()
+#4 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction()
+#5 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#6 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#7 /home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php(12): yii\base\Application->run()
+#8 {main}
+2022-01-12 22:25:34 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/reinwoerstz/NetBeansProjects/Tests/backend/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '37708'
+    'SERVER_SOFTWARE' => 'PHP 7.4.27 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/product/create'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php'
+    'PATH_INFO' => '/product/create'
+    'PHP_SELF' => '/index.php/product/create'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Symfony BrowserKit'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_CONTENT_TYPE' => 'application/json'
+    'CONTENT_LENGTH' => '61'
+    'HTTP_CONTENT_LENGTH' => '61'
+    'REQUEST_TIME_FLOAT' => 1642022734.6685
+    'REQUEST_TIME' => 1642022734
+]
+2022-01-12 22:25:50 [127.0.0.1][-][-][error][yii\base\ErrorException:2] yii\base\ErrorException: Creating default object from empty value in /home/reinwoerstz/NetBeansProjects/Tests/backend/controllers/ProductController.php:141
+Stack trace:
+#0 /home/reinwoerstz/NetBeansProjects/Tests/backend/controllers/ProductController.php(141): yii\base\ErrorHandler->handleError()
+#1 [internal function]: app\controllers\ProductController->actionCreate()
+#2 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array()
+#3 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams()
+#4 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction()
+#5 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#6 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#7 /home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php(12): yii\base\Application->run()
+#8 {main}
+2022-01-12 22:25:50 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/reinwoerstz/NetBeansProjects/Tests/backend/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '37832'
+    'SERVER_SOFTWARE' => 'PHP 7.4.27 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/product/create'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php'
+    'PATH_INFO' => '/product/create'
+    'PHP_SELF' => '/index.php/product/create'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '89'
+    'HTTP_CONTENT_LENGTH' => '89'
+    'HTTP_SEC_CH_UA' => '\"Chromium\";v=\"92\", \" Not A;Brand\";v=\"99\", \"Google Chrome\";v=\"92\"'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_CONTENT_TYPE' => 'application/json'
+    'HTTP_ORIGIN' => 'http://localhost:8081'
+    'HTTP_SEC_FETCH_SITE' => 'same-site'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost:8081/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-ZA,en-GB;q=0.9,en;q=0.8,af;q=0.7'
+    'REQUEST_TIME_FLOAT' => 1642022750.186
+    'REQUEST_TIME' => 1642022750
+]
+2022-01-12 22:28:43 [127.0.0.1][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Trying to get property 'sku' of non-object in /home/reinwoerstz/NetBeansProjects/Tests/backend/controllers/ProductController.php:165
+Stack trace:
+#0 /home/reinwoerstz/NetBeansProjects/Tests/backend/controllers/ProductController.php(165): yii\base\ErrorHandler->handleError()
+#1 [internal function]: app\controllers\ProductController->actionCreate()
+#2 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array()
+#3 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams()
+#4 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction()
+#5 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#6 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#7 /home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php(12): yii\base\Application->run()
+#8 {main}
+2022-01-12 22:28:43 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/reinwoerstz/NetBeansProjects/Tests/backend/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '39292'
+    'SERVER_SOFTWARE' => 'PHP 7.4.27 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/product/create'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php'
+    'PATH_INFO' => '/product/create'
+    'PHP_SELF' => '/index.php/product/create'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Symfony BrowserKit'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_CONTENT_TYPE' => 'application/json'
+    'CONTENT_LENGTH' => '2'
+    'HTTP_CONTENT_LENGTH' => '2'
+    'REQUEST_TIME_FLOAT' => 1642022923.9294
+    'REQUEST_TIME' => 1642022923
+]
+2022-01-12 22:29:12 [127.0.0.1][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Trying to get property 'sku' of non-object in /home/reinwoerstz/NetBeansProjects/Tests/backend/controllers/ProductController.php:165
+Stack trace:
+#0 /home/reinwoerstz/NetBeansProjects/Tests/backend/controllers/ProductController.php(165): yii\base\ErrorHandler->handleError()
+#1 [internal function]: app\controllers\ProductController->actionCreate()
+#2 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array()
+#3 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams()
+#4 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction()
+#5 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#6 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#7 /home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php(12): yii\base\Application->run()
+#8 {main}
+2022-01-12 22:29:12 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/reinwoerstz/NetBeansProjects/Tests/backend/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '39532'
+    'SERVER_SOFTWARE' => 'PHP 7.4.27 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/product/create'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php'
+    'PATH_INFO' => '/product/create'
+    'PHP_SELF' => '/index.php/product/create'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Symfony BrowserKit'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_CONTENT_TYPE' => 'application/json'
+    'CONTENT_LENGTH' => '2'
+    'HTTP_CONTENT_LENGTH' => '2'
+    'REQUEST_TIME_FLOAT' => 1642022952.5508
+    'REQUEST_TIME' => 1642022952
+]
+2022-01-12 22:29:17 [127.0.0.1][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Trying to get property 'sku' of non-object in /home/reinwoerstz/NetBeansProjects/Tests/backend/controllers/ProductController.php:165
+Stack trace:
+#0 /home/reinwoerstz/NetBeansProjects/Tests/backend/controllers/ProductController.php(165): yii\base\ErrorHandler->handleError()
+#1 [internal function]: app\controllers\ProductController->actionCreate()
+#2 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array()
+#3 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams()
+#4 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction()
+#5 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#6 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#7 /home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php(12): yii\base\Application->run()
+#8 {main}
+2022-01-12 22:29:17 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/reinwoerstz/NetBeansProjects/Tests/backend/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '39572'
+    'SERVER_SOFTWARE' => 'PHP 7.4.27 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/product/create'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php'
+    'PATH_INFO' => '/product/create'
+    'PHP_SELF' => '/index.php/product/create'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Symfony BrowserKit'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_CONTENT_TYPE' => 'application/json'
+    'CONTENT_LENGTH' => '2'
+    'HTTP_CONTENT_LENGTH' => '2'
+    'REQUEST_TIME_FLOAT' => 1642022957.0467
+    'REQUEST_TIME' => 1642022957
+]
+2022-01-12 22:30:15 [127.0.0.1][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Trying to get property 'sku' of non-object in /home/reinwoerstz/NetBeansProjects/Tests/backend/controllers/ProductController.php:165
+Stack trace:
+#0 /home/reinwoerstz/NetBeansProjects/Tests/backend/controllers/ProductController.php(165): yii\base\ErrorHandler->handleError()
+#1 [internal function]: app\controllers\ProductController->actionCreate()
+#2 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array()
+#3 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams()
+#4 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction()
+#5 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#6 /home/reinwoerstz/NetBeansProjects/Tests/backend/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#7 /home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php(12): yii\base\Application->run()
+#8 {main}
+2022-01-12 22:30:15 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/reinwoerstz/NetBeansProjects/Tests/backend/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '40052'
+    'SERVER_SOFTWARE' => 'PHP 7.4.27 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/product/create'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/reinwoerstz/NetBeansProjects/Tests/backend/web/index.php'
+    'PATH_INFO' => '/product/create'
+    'PHP_SELF' => '/index.php/product/create'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Symfony BrowserKit'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_CONTENT_TYPE' => 'application/json'
+    'CONTENT_LENGTH' => '2'
+    'HTTP_CONTENT_LENGTH' => '2'
+    'REQUEST_TIME_FLOAT' => 1642023015.9608
+    'REQUEST_TIME' => 1642023015
+]
