@@ -2,11 +2,6 @@
   <div class="product-add">
     <b-container>
       <b-form class="mt" @submit.prevent="onSubmit">
-        
-        <!-- RESPONSE -->
-        <b-alert class="alert-sm" :variant="responseSuccess ? 'success' : 'danger'" v-if="responseMessage">
-          {{ responseMessage }}
-        </b-alert>
 
         <!-- PRODUCT INFO -->
         <div class="form-section">
@@ -26,8 +21,6 @@
                 type="text"
                 placeholder=""
                 required
-                @change="validateSku"
-
               ></b-form-input>
               <div class="help-text text-danger" v-if="errors.sku">{{ errors.sku }}</div>
             </b-form-group>
@@ -39,7 +32,7 @@
         <div class="form-section">
           <div class="form-row">
             <div class="form-section-title">2. Product Attributes</div>
-            <div class="form-section-subtitle">List of attributes which describe the product.</div>
+            <div class="form-section-subtitle">List of attributes which describe the product. Duplicate attributes with the same key will not be added. You may add as many as you like.</div>
           </div>
           <div class="form-row" v-if="form.attributes.length === 0">
             <p class="text-help">This product does not have any attributes yet.</p>
@@ -57,10 +50,10 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr v-for="index in form.attributes.length" v-bind:key="index">
-                        <th colspan="2">{{index+1}}</th>
-                        <td colspan="4">{{  }}</td>
-                        <td colspan="4">{{ form.attributes[index] }}</td>
+                    <tr v-for="(attribute, index) in form.attributes" v-bind:key="index">
+                        <th colspan="2">{{index + 1}}</th>
+                        <td colspan="4">{{ attribute.key }}</td>
+                        <td colspan="4">{{ attribute.val }}</td>
                         <td colspan="2" class="col-remove"><a href="#" v-on:click="removeAttribute(index)">remove</a></td>
                     </tr>
                   </tbody>
@@ -96,7 +89,6 @@
 
 
       </b-form>
-      <template v-if="isDebugMode">{{ postData }}</template>
     </b-container>
   </div>
 </template>
@@ -114,24 +106,20 @@ export default {
   data() {
     return {
       responseMessage: null,
-      responseSuccess: null,
+      responseSuccess: false,
       form: {
         sku: null,
         attributes: []
       },
       postData: {},
-      isDebugMode: true,
-      disabled: false,
-      errors: {}
+      errors: {},
+      boxTwo: null
     };
   },
   props: {
     data: {
         type: Array,
         required: false
-    },
-    errorResponse: {
-      type: String, 
     }
   },
   methods: {
@@ -149,31 +137,45 @@ export default {
     },
 
     /**
-     * Validate Sku
+     * Show Modal Box
      * 
-     * This method validates the data received in the form input fields. 
-     * The rules are:
+     * This method displays a modal box to the user with the message 
+     * from the outcome of the request to create the product.
      * 
-     * - SKU may not be blank
-     * - SKU may not exist in the database
-     * - attributes may be empty
-     * 
-     * This method will return an array of errors if the validation failed, or
-     * alternatively it just returns true.
-     * 
-     * @param object formData
-     * @return array|true
+     * @param string message
+     * @param function callback
+     * @return void
      */
-    validateSku(value) {
-      console.log(value)
-      this.$http.getByName(value)
-                .then(statusCode => {
-                  if(statusCode === 204) {
-                    alert(statusCode)
-                  }
-                })
+     showModalBox(message, redirect) {
+        this.boxTwo = ''
+        this.$bvModal.msgBoxOk(message, {
+          title: (this.responseSuccess ? 'Operation completed.' : 'Operation failed.'),
+          size: 'sm',
+          buttonSize: 'sm',
+          okVariant: (this.responseSuccess ? 'success' : 'danger'),
+          headerClass: 'p-2 border-bottom-0',
+          footerClass: 'p-2 border-top-0',
+          centered: true
+        })
+        .then(value => {
+          this.boxTwo = value
 
-    },
+          if(redirect === true) {
+
+            /**
+             * Debounce briefly so that the user can read the message.
+             */
+            setTimeout(() => {
+              this.$emit('updateUi', {action: 'list', type: 'product'})
+            }, 1650)
+          }
+
+        })
+        .catch(err => {
+          console.log(err)
+        })
+     },
+
 
     /**
      * On Submit
@@ -191,23 +193,69 @@ export default {
        */
       let newAttrObject = {}
       this.form.attributes.forEach((arrayItem) => {
-        console.log("--------------------------------------------")
-        console.log("Adding attribute with key: " + arrayItem.key)
-        console.log("Adding attribute with val: " + arrayItem.val)
-        console.log("newAttrObject updated value=" + newAttrObject)
-        console.log("--------------------------------------------")
         newAttrObject[arrayItem.key] = arrayItem.val
       })
 
+      /**
+       * Service class createProduct() method call sends an outbound request
+       * to the /product/create endpoint of the API with the JSON object 
+       * representing a new product on the system in the body of the request.
+       */
       this.$http.createProduct({sku: this.form.sku, attributes: newAttrObject})
                 .then((response) => {
+
+                  /**
+                   * HANDLE API RESPONSE.
+                   */
                   if(response.status === 201) {
-                    this.$emit('updateUi', {action: 'list', type: 'product'})
+                    
+                    /**
+                     * Set responseSuccess property to true.
+                     */
+                    this.responseSuccess = true
+
+                    /**
+                     * Set responseMessage property to a message.
+                     */
+                    this.responseMessage = "Successfully created product! Redirecting shortly.."
+                    this.showModalBox(this.responseMessage, true)
+
+                  } else {
+
+                    /**
+                     * Set response to false and change the responseMessage property 
+                     * from null to an empty string. 
+                     */
+                    this.responseSuccess = false
+                    this.responseMessage = ""
+                    
+                    /**
+                     * Transform the response error messages into one string.
+                     */
+                    Object.entries(response.data).forEach((val) => {
+
+                      /**
+                       * Assign each to the responseMessage property.
+                       */
+                      this.responseMessage += " " + val
+
+                    })
+                    
+                    this.showModalBox(this.responseMessage, false)
+
                   }
-                  this.postData = response
+
+
                 })
                 .catch(error => {
-                  console.log(error)
+
+                  /**
+                   * Error handler for back-end exceptions.
+                   */
+                  this.showModalBox(error)
+                  this.responseSuccess = false
+                  this.responseMessage = error
+
                 })
     
     },
@@ -222,23 +270,14 @@ export default {
      * @return void
      */
     addAttribute(e) {
-      console.log("-------------------------------------")
-      console.log("-------------------------------------")
       this.form.attributes.push(e)
     },
-
-  },
-  mounted() {
 
   }
 };
 </script>
 
 <style lang="css" scoped>
-
-.product-add {
-  /*padding: 42px;*/
-}
 
 .product-add p {
   text-align: left;

@@ -39,7 +39,7 @@
           id="input-group-3"
           label-for="input-3"
         >
-            <b-button variant="secondary" size="sm" type="submit">Add</b-button>
+          <b-button variant="secondary" size="sm" type="submit">Add</b-button>
         </b-form-group>
       </b-col>
       </b-row>
@@ -49,7 +49,15 @@
 
 <script>
 export default {
+
+  /**
+   * Component Name
+   */
   name: 'ProductAttributeInput',
+
+  /**
+   * Component State
+   */
   data() {
     return {
       form: {
@@ -58,6 +66,14 @@ export default {
       },
     };
   },
+
+  /**
+   * Mounted 
+   * 
+   * This is the mounted() Vue lifecycle hook which is used to 
+   * set up the local state variables from prop values passed 
+   * down from the parent component.
+   */
   mounted() {
     if(this.formName !== null || !isNaN(this.formName)) {
       this.form.attribute = this.formName
@@ -66,6 +82,17 @@ export default {
       this.form.value = this.formValue
     }
   },
+
+  /**
+   * Component Props
+   * 
+   * These are the props which may be used to pass the values
+   * down from the parent component to this component's state.
+   * 
+   * @id
+   * @formName
+   * @formValue
+   */
   props: {
     id: {
       type: Number,
@@ -82,6 +109,15 @@ export default {
     }
   },
   methods: {
+
+    /**
+     * Validate Field
+     * 
+     * Basic required validation logic for the input fields.
+     *
+     * @param string val
+     * @return boolean true|false
+     */
     validateField(val) {
       if(val === undefined || isNaN(val) || val === "") {
           return false
@@ -89,11 +125,26 @@ export default {
           return true
       }
     },
+
+    /**
+     * Bubble Value
+     * 
+     * This method wraps the Vue $emit function and sends the 
+     * key and val of the form's inputs to the parent component
+     * configured to listen to the createAttribute event.
+     * 
+     * @return void
+     */
     bubbleValue() {
+      
       this.$emit('createAttribute', {
           key: this.form.attribute,
           val: this.form.value
       })
+
+      this.form.attribute = null
+      this.form.value = null
+
     }
   }
 };

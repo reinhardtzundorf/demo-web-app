@@ -65,6 +65,7 @@ export default {
 
 .default-layout h1 {
     margin-top: 32px;
+    font-size: 20px;
 }
 
 </style>
