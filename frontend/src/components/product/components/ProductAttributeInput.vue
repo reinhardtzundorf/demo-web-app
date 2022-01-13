@@ -1,52 +1,50 @@
 <template>
-    <b-container fluid class="form-attribute-input">
-        <form class="mt" @submit.prevent="bubbleValue">
-            <b-row>
-                <b-col lg="5">
-                    <b-form-group
-                      id="input-group-1"
-                      label-for="input-1"
-                    >
-                      <b-form-input
-                        class="form-input-attr"
-                        id="input-1"
-                        v-model="form.attribute"
-                        type="text"
-                        placeholder="Attribute name"
-                        required
-                        @change="disabled = true"
-                      >
-                      </b-form-input>
-                    </b-form-group>
-                </b-col>
-                <b-col lg="5">
-                    <b-form-group
-                      id="input-group-2"
-                      label-for="input-2"
-                    >
-                      <b-form-input
-                        class="form-input-attr"
-                        id="input-2"
-                        v-model="form.value"
-                        type="text"
-                        placeholder="Attribute value"
-                        required
-                        @change="disabled = true"
-                      >
-                      </b-form-input>
-                    </b-form-group>
-                </b-col>
-                <b-col lg="2">
-                    <b-form-group
-                      id="input-group-3"
-                      label-for="input-3"
-                    >
-                        <b-button variant="secondary" size="sm" type="submit">Add</b-button>
-                    </b-form-group>
-                </b-col>
-            </b-row>
-        </form>
-    </b-container>
+  <b-container fluid class="form-attribute-input">
+    <form class="mt" @submit.prevent="bubbleValue">
+      <b-row>
+        <b-col lg="5">
+          <b-form-group
+            id="input-group-1"
+            label-for="input-1"
+          >
+          <b-form-input
+            class="form-input-attr"
+            id="attribute"
+            v-model="form.attribute"
+            type="text"
+            placeholder="Attribute name"
+            required
+          >
+          </b-form-input>
+        </b-form-group>
+      </b-col>
+      <b-col lg="5">
+        <b-form-group
+          id="input-group-2"
+          label-for="input-2"
+        >
+          <b-form-input
+            class="form-input-attr"
+            id="value"
+            v-model="form.value"
+            type="text"
+            placeholder="Attribute value"
+            required
+          >
+          </b-form-input>
+        </b-form-group>
+      </b-col>
+      <b-col lg="2">
+        <b-form-group
+          id="input-group-3"
+          label-for="input-3"
+        >
+            <b-button variant="secondary" size="sm" type="submit">Add</b-button>
+        </b-form-group>
+      </b-col>
+      </b-row>
+    </form>
+  </b-container>
 </template>
 
 <script>
@@ -54,52 +52,48 @@ export default {
   name: 'ProductAttributeInput',
   data() {
     return {
-        form: {
-            attribute: null,
-            value: null,
-        },
-        disabled: false
+      form: {
+        attribute: null,
+        value: null,
+      },
     };
   },
   mounted() {
-    
     if(this.formName !== null || !isNaN(this.formName)) {
-        this.form.attribute = this.formName
+      this.form.attribute = this.formName
     }
-
     if(this.formValue !== null || !isNaN(this.formValue)) {
-        this.form.value = this.formValue
+      this.form.value = this.formValue
     }
-
   },
   props: {
     id: {
-        type: Number,
-        default: 1,
-        required: false
+      type: Number,
+      default: 1,
+      required: false
     },
     formName: {
-        type: String,
-        required: false
+      type: String,
+      required: false
     },
     formValue: {
-        type: String,
-        required: false
+      type: String,
+      required: false
     }
   },
   methods: {
-    bubbleValue(e) {
-
-        if(this.form.attribute === "" && this.form.value === "") {
-            this.disabled = true
-            return false
-        } 
-
-        console.log(e)
-        this.$emit('createAttribute', {
-            key: this.form.attribute,
-            val: this.form.value
-        })
+    validateField(val) {
+      if(val === undefined || isNaN(val) || val === "") {
+          return false
+      } else {
+          return true
+      }
+    },
+    bubbleValue() {
+      this.$emit('createAttribute', {
+          key: this.form.attribute,
+          val: this.form.value
+      })
     }
   }
 };

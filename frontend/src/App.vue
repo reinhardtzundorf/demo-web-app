@@ -7,7 +7,7 @@
     </b-container>
     <LayoutDefault>
       <template #main>
-          <component :is="active.component" @updateUi="changeView(e)"></component>
+          <component :is="active.component" @updateUi="val => changeView(val)"></component>
       </template>
       <template #sidebar>
         <ProductControls @updateUi="val => changeView(val)"></ProductControls>

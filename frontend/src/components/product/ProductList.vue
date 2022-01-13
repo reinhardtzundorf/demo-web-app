@@ -10,12 +10,12 @@
             </thead>
             <tbody>
                 <tr v-for="(product, index) in products" v-bind:key="product.sku">
-                    <td>{{ index + 1 }}</td>
+                    <td>{{ index }}</td>
                     <td>{{ product.sku }}</td>
                     <td>
-                        <table class="table ">
+                        <table class="table table-borderless ">
                             <tbody>
-                                <tr v-for="(k, v, idx) in product.attributes" v-bind:key="idx">
+                                <tr v-for="(v, k, idx) in product.attributes" v-bind:key="idx">
                                     <td colspan="2">{{ k }}</td>
                                     <td colspan="1">{{ v }}</td>
                                 </tr>
@@ -58,6 +58,14 @@ export default {
     /*margin: 24px;*/
 }
 
+ table {
+  font-size: 12px;
+  color: #444;
+  border-color: #666;
+}
 
+table th {
+  border-color: #666;
+}
 
 </style>

@@ -11,7 +11,7 @@
         <!-- PRODUCT INFO -->
         <div class="form-section">
           <div class="form-row">
-            <div class="form-section-title">Product Information</div>
+            <div class="form-section-title">1. Product Information</div>
             <div class="form-section-subtitle">Please complete the following fields:</div>
           </div>
           <div class="form-row">
@@ -26,18 +26,25 @@
                 type="text"
                 placeholder=""
                 required
+                @change="validateSku"
+
               ></b-form-input>
+              <div class="help-text text-danger" v-if="errors.sku">{{ errors.sku }}</div>
             </b-form-group>
           </div>
         </div>
 
+
         <!-- PRODUCT ATTRIBUTES -->
         <div class="form-section">
           <div class="form-row">
-            <div class="form-section-title">Product Attributes</div>
-            <div class="form-section-subtitle">Please add some attributes to your product to describe it.</div>
+            <div class="form-section-title">2. Product Attributes</div>
+            <div class="form-section-subtitle">List of attributes which describe the product.</div>
           </div>
-          <div class="form-row" v-if="form.attributes.length > 0">
+          <div class="form-row" v-if="form.attributes.length === 0">
+            <p class="text-help">This product does not have any attributes yet.</p>
+          </div>
+          <div class="form-row" v-else>
             <div class="form-section-attributes">
               <div class="form-group">
                 <table class="table table-hover table-borderless w-100">
@@ -50,10 +57,10 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr v-for="(attribute, index) in form.attributes" v-bind:key="index">
+                    <tr v-for="index in form.attributes.length" v-bind:key="index">
                         <th colspan="2">{{index+1}}</th>
-                        <td colspan="4">{{ attribute.key }}</td>
-                        <td colspan="4">{{ attribute.val }}</td>
+                        <td colspan="4">{{  }}</td>
+                        <td colspan="4">{{ form.attributes[index] }}</td>
                         <td colspan="2" class="col-remove"><a href="#" v-on:click="removeAttribute(index)">remove</a></td>
                     </tr>
                   </tbody>
@@ -63,10 +70,12 @@
           </div>
         </div>
 
+
         <!-- ATTRIBUTE FORM -->
         <div class="form-section">
           <div class="form-row">
-            <div class="form-section-title">Add An Attribute</div>
+            <div class="form-section-title">3. Add Attribute</div>
+            <div class="form-section-subtitle">Complete this form to add a new attribute to the product.</div>
           </div>
           <div class="form-row">
             <div class="form-group">
@@ -75,14 +84,16 @@
           </div>
         </div>
 
+
         <!-- SUBMIT -->
         <div class="form-section">
           <div class="form-row">
-            <div class="form-section-title">Create Product</div>
+            <div class="form-section-title">4. Create Product</div>
             <div class="form-section-subtitle">Please check the details you entered and click the button to create the new product.</div>
           </div>
           <div class="row"><b-button type="submit" variant="success" size="medium">Create Product</b-button></div>
         </div>
+
 
       </b-form>
       <template v-if="isDebugMode">{{ postData }}</template>
@@ -92,7 +103,6 @@
 
 <script>
 
-import _ from 'lodash'
 import ProductAttributeInput from './components/ProductAttributeInput.vue'
 
 export default {
@@ -107,19 +117,12 @@ export default {
       responseSuccess: null,
       form: {
         sku: null,
-        attributes: [
-          {
-            key: "attr1",
-            val: "val1"
-          },
-          {
-            key: "attr2",
-            val: "val2"
-          }
-        ]
+        attributes: []
       },
       postData: {},
       isDebugMode: true,
+      disabled: false,
+      errors: {}
     };
   },
   props: {
@@ -146,7 +149,7 @@ export default {
     },
 
     /**
-     * Validate Data
+     * Validate Sku
      * 
      * This method validates the data received in the form input fields. 
      * The rules are:
@@ -161,58 +164,52 @@ export default {
      * @param object formData
      * @return array|true
      */
-    validateData(e) {
-      console.log(e)
+    validateSku(value) {
+      console.log(value)
+      this.$http.getByName(value)
+                .then(statusCode => {
+                  if(statusCode === 204) {
+                    alert(statusCode)
+                  }
+                })
+
     },
 
     /**
      * On Submit
      * 
      * This method handles the submission of the form in this component. 
-     * The form data is bubbled up to the parent component, where the API
-     * client does the outbound request to the backend. 
+     * The product.service.js script is used to handle the requests to 
+     * the API backend.
      * 
-     * The response will be passed back through props if there is an error;
-     * otherwise the view is reloaded and the list of products is displayed.
+     * @return void
      */
     onSubmit() {
 
-      // let productObject = {}
-
-      // productObject.sku = this.form.sku
-      // productObject.attributes = {}
-
-      // this.form.attributes.forEach((attribute) => {
-      //   productObject.attributes[attribute.key] = attribute.val
-      // })
-
-      let attr = this.form.attributes 
-
-      _.transform(attr, (r,c,k) => r.push({[k]:c}), [])
-
-      console.log(attr)
-
+      /**
+       * Transform the attributes before sending them.
+       */
       let newAttrObject = {}
       this.form.attributes.forEach((arrayItem) => {
+        console.log("--------------------------------------------")
+        console.log("Adding attribute with key: " + arrayItem.key)
+        console.log("Adding attribute with val: " + arrayItem.val)
+        console.log("newAttrObject updated value=" + newAttrObject)
+        console.log("--------------------------------------------")
         newAttrObject[arrayItem.key] = arrayItem.val
       })
 
       this.$http.createProduct({sku: this.form.sku, attributes: newAttrObject})
                 .then((response) => {
                   if(response.status === 201) {
-                    alert("created");
-                    this.$emit('onCreated', response.data)
+                    this.$emit('updateUi', {action: 'list', type: 'product'})
                   }
                   this.postData = response
                 })
                 .catch(error => {
-                  alert(error)
                   console.log(error)
                 })
-                .finally(() => {
-                  alert("finally")
-                })
-
+    
     },
 
     /**
@@ -225,34 +222,13 @@ export default {
      * @return void
      */
     addAttribute(e) {
-      alert(e);
-      const val = e.val
-      const key = e.key
-      const newAttr = {}
-      newAttr[key] = val
-      this.form.attributes.push(newAttr)
+      console.log("-------------------------------------")
+      console.log("-------------------------------------")
+      this.form.attributes.push(e)
     },
 
-    /**
-     * Get Last Inserted Id 
-     * 
-     * This method returns the last inserted product's ID from the database 
-     * table. It uses the actionIndex endpoint and selects the last item
-     * from the result set. If the result set is empty, it returns 0.
-     * 
-     * @return int lastId
-     */
-    async getLastInsertedId() {
-      // const response = await this.$http.get('product')
-      // const items = response.data.data
-      // const length = items.length
-      // alert(items[length])
-      // console.log(response)
-    }
-
   },
-  async mounted() {
-    // 
+  mounted() {
 
   }
 };

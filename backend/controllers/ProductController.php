@@ -124,6 +124,39 @@ class ProductController extends Controller
     {
         return Product::find()->all();
     }
+    
+    /**
+     * Action Name
+     * 
+     * This action defines the workflow for searching for a product by name.
+     * This is used in the AddProduct.vue component on the front-end to confirm
+     * whether a given sku has been taken or is available during validation.
+     * 
+     * @param string $name
+     * @return void
+     */
+    public function actionName()
+    {
+        $name = \Yii::$app->request->getQueryParam("name");
+        
+        if(!isset($name) || $name === "") {
+            $this->response->statusCode = 400;
+            return "Missing name parameter from query string.";
+        }
+        
+        $product = Product::find()
+                          ->where(["sku"=>$name])
+                          ->one();
+        
+        if($product == null) {
+            $this->response->statusCode = 204;
+        } else {
+            $this->response->statusCode = 400;
+        }
+        
+        return $product;
+        
+    }
 
     /**
      * Action Create

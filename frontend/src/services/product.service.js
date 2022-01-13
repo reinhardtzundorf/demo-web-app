@@ -34,7 +34,7 @@ export default {
      * @return promise
      */
     getByName(name) {
-      return client.get(`/product/${name}`)
+      return client.get(`/product/name?name=${name}`)
     },  
 
     /**

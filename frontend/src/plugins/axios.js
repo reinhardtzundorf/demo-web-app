@@ -37,20 +37,17 @@ client.interceptors.response.use(
     if (response.status === 200) {
         console.log(response)
     }    
-
     return Promise.resolve(response)
-
   },
   function (error) {
-
-    const response = error.response;
-
-    if (response.status >= 500 && response.data !== undefined && response.data.detail !== undefined) {
-        alert('500 error');
-    } else {
-        alert('500 error');
-    }
-
+    const response = error.response
+    console.log(error)
+    console.log(response)
+    // if (response.status >= 500 && response.data !== undefined && response.data.detail !== undefined) {
+    //     console.log(error)
+    // } else {
+    //     alert('500 error');
+    // }
     return Promise.reject(error)
   }
 );
